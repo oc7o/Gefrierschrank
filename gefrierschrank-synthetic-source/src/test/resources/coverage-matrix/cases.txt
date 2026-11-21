@@ -1,0 +1,626 @@
+# End-to-end coverage matrix (ReconstructionCoverageTest). Each case: the mapping (the test adds
+# "_source":{"enabled":false}), extra settings, the expectation, and documents. Expectations:
+#   covered                 every document equals the native-synthetic oracle, or differs only in
+#                           fields its _ignored lists and is counted
+#   refused <tokens>        the open or the first read refuses with exactly these tokens
+#   covered-unordered       covered, comparing arrays as sorted (synthetic_source_keep kept the sent
+#                           order only in _ignored_source, which stored mode never wrote)
+#   optin <paths>           with --source-disabled-accept unmapped-values: covered once the oracle
+#                           drops these paths (values under dynamic:false/runtime objects)
+# An "inject:" line adds to the stored-mode index a delete tombstone ("tombstone") or a Lucene
+# field no mapper knows ("stray"), or ("delete <i>") commits before the last document, deletes
+# document i (counted over doc: and update: lines) and force-merges into one segment after the last.
+# An "update:" line between documents merges a mapping update into the stored-mode index.
+# Every segment's FieldInfos leaf (the commit-point preflight) must refuse exactly as its real
+# leaf; a "preflight:" line names what the FieldInfos leaf gives instead ("none" for nothing) where
+# the real leaf refuses on data the preflight cannot see.
+#   unbuildable             the isolated MapperService cannot build the mapping at all (no analysis
+#                           modules, no script compiler): the worker fails at open, as in 1.1.0
+# The real leaf with its _field_names postings hidden must refuse exactly as the real leaf; a
+# "pruned:" line names what it gives instead where a text field without norms with a keyword
+# multi-field has postings but no _field_names entry (fail closed, values without tokens unseen).
+# Settings default to index.version.created=9039000 (ES 9.3).
+
+== keyword plain
+mapping: {"properties":{"f":{"type":"keyword"}}}
+expect: covered
+doc: {"f":"v"}
+doc: {"f":["b","a","a"]}
+doc: {}
+
+== keyword ignore_above
+mapping: {"properties":{"f":{"type":"keyword","ignore_above":3}}}
+expect: covered
+doc: {"f":"ab"}
+doc: {"f":"toolong"}
+doc: {"f":["ab","toolong"]}
+
+== keyword index.mapping.ignore_above
+settings: index.mapping.ignore_above=3
+mapping: {"properties":{"f":{"type":"keyword"}}}
+expect: covered
+doc: {"f":"ab"}
+doc: {"f":"toolong"}
+
+== keyword null_value
+mapping: {"properties":{"f":{"type":"keyword","null_value":"NULL"}}}
+expect: covered
+doc: {"f":null}
+doc: {"f":"x"}
+
+== keyword normalizer
+mapping: {"properties":{"f":{"type":"keyword","normalizer":"lowercase"}}}
+expect: unbuildable
+doc: {"f":"MiXeD"}
+
+== keyword doc_values false
+mapping: {"properties":{"f":{"type":"keyword","doc_values":false}}}
+expect: refused keyword:fallback
+doc: {"f":"v"}
+
+== keyword doc_values false stored
+mapping: {"properties":{"f":{"type":"keyword","doc_values":false,"store":true}}}
+expect: covered
+doc: {"f":"v"}
+
+== keyword copy_to source
+mapping: {"properties":{"f":{"type":"keyword","copy_to":"all"},"all":{"type":"keyword"}}}
+expect: refused keyword:copy_to
+doc: {"f":"v"}
+
+== keyword copy_to target only
+mapping: {"properties":{"f":{"type":"keyword","copy_to":"all"},"all":{"type":"keyword"}}}
+expect: covered
+doc: {"all":"own"}
+
+== keyword runtime shadow same path
+mapping: {"runtime":{"f":{"type":"keyword"}},"properties":{"f":{"type":"keyword"}}}
+expect: covered
+doc: {"f":"v"}
+
+== runtime field without concrete field
+mapping: {"runtime":{"rt":{"type":"keyword"}},"properties":{"f":{"type":"keyword"}}}
+expect: refused runtime:shadowing
+doc: {"f":"v","rt":"shadowed"}
+
+== constant_keyword with value
+mapping: {"properties":{"ck":{"type":"constant_keyword","value":"c"},"a":{"type":"keyword"},"z":{"type":"keyword"}}}
+expect: covered
+doc: {"a":"x","ck":"c","z":"y"}
+doc: {"a":"x","z":"y"}
+doc: {}
+
+== constant_keyword in object
+mapping: {"properties":{"o":{"properties":{"ck":{"type":"constant_keyword","value":"c"},"b":{"type":"keyword"}}},"k":{"type":"keyword"}}}
+expect: covered
+doc: {"k":"v","o":{"b":"x","ck":"c"}}
+doc: {"k":"v","o":{"b":"x"}}
+doc: {"k":"v"}
+
+== constant_keyword without value
+mapping: {"properties":{"ck":{"type":"constant_keyword"},"k":{"type":"keyword"}}}
+expect: covered
+doc: {"k":"v"}
+
+== wildcard plain
+mapping: {"properties":{"f":{"type":"wildcard"}}}
+expect: covered
+doc: {"f":"abc"}
+doc: {"f":["b","a"]}
+
+== wildcard ignore_above
+mapping: {"properties":{"f":{"type":"wildcard","ignore_above":3}}}
+expect: covered
+doc: {"f":"ab"}
+doc: {"f":"toolong"}
+
+== wildcard null_value
+mapping: {"properties":{"f":{"type":"wildcard","null_value":"N"}}}
+expect: covered
+doc: {"f":null}
+
+== counted_keyword
+mapping: {"properties":{"f":{"type":"counted_keyword"}}}
+expect: covered
+doc: {"f":["a","a","b"]}
+doc: {"f":"x"}
+
+== text plain
+mapping: {"properties":{"f":{"type":"text"}}}
+expect: refused text:no-native-source
+doc: {"f":"hello world"}
+
+== text stored
+mapping: {"properties":{"f":{"type":"text","store":true}}}
+expect: covered
+doc: {"f":"hello world"}
+
+== text keyword sub-field
+mapping: {"properties":{"f":{"type":"text","fields":{"raw":{"type":"keyword"}}}}}
+expect: covered
+doc: {"f":"hello world"}
+
+== text keyword sub-field ignore_above
+mapping: {"properties":{"f":{"type":"text","fields":{"raw":{"type":"keyword","ignore_above":5}}}}}
+expect: covered
+doc: {"f":"hey"}
+doc: {"f":"hello world"}
+
+== text keyword sub-field without doc values
+mapping: {"properties":{"f":{"type":"text","fields":{"raw":{"type":"keyword","doc_values":false}}}}}
+expect: refused text:no-native-source
+doc: {"f":"hello"}
+
+== text copy_to target
+mapping: {"properties":{"a":{"type":"keyword","copy_to":"all"},"all":{"type":"text"}}}
+expect: refused keyword:copy_to text:no-native-source
+doc: {"a":"v"}
+
+== match_only_text
+mapping: {"properties":{"f":{"type":"match_only_text"}}}
+expect: refused match_only_text:no-native-source
+doc: {"f":"hello world"}
+
+== match_only_text keyword sub-field
+mapping: {"properties":{"f":{"type":"match_only_text","fields":{"raw":{"type":"keyword"}}}}}
+expect: covered
+pruned: match_only_text:no-native-source
+doc: {"f":"hello world"}
+
+== match_only_text keyword sub-field ignore_above
+mapping: {"properties":{"f":{"type":"match_only_text","fields":{"raw":{"type":"keyword","ignore_above":5}}}}}
+expect: covered
+pruned: match_only_text:no-native-source
+doc: {"f":"hey"}
+doc: {"f":"hello world"}
+
+== search_as_you_type
+mapping: {"properties":{"f":{"type":"search_as_you_type"}}}
+expect: refused search_as_you_type:fallback
+doc: {"f":"hello world"}
+
+== token_count
+mapping: {"properties":{"f":{"type":"token_count","analyzer":"default"}}}
+expect: refused token_count:fallback
+doc: {"f":"a b c"}
+
+== long plain
+mapping: {"properties":{"f":{"type":"long"}}}
+expect: covered
+doc: {"f":3}
+doc: {"f":[3,1,3]}
+
+== long ignore_malformed
+mapping: {"properties":{"f":{"type":"long","ignore_malformed":true}}}
+expect: covered
+doc: {"f":3}
+doc: {"f":"x"}
+
+== long null_value
+mapping: {"properties":{"f":{"type":"long","null_value":7}}}
+expect: covered
+doc: {"f":null}
+
+== long not indexed
+mapping: {"properties":{"f":{"type":"long","index":false,"doc_values":false}}}
+expect: refused long:not-indexed
+doc: {"f":3}
+
+== long copy_to
+mapping: {"properties":{"f":{"type":"long","copy_to":"all"},"all":{"type":"keyword"}}}
+expect: refused long:copy_to
+doc: {"f":5}
+
+== integer short byte
+mapping: {"properties":{"i":{"type":"integer","ignore_malformed":true},"s":{"type":"short","ignore_malformed":true},"b":{"type":"byte","ignore_malformed":true}}}
+expect: covered
+doc: {"i":1,"s":2,"b":3}
+doc: {"i":"x","s":"y","b":"z"}
+
+== double float half_float
+mapping: {"properties":{"d":{"type":"double","ignore_malformed":true},"f":{"type":"float","ignore_malformed":true},"h":{"type":"half_float","ignore_malformed":true}}}
+expect: covered
+doc: {"d":1.5,"f":2.25,"h":0.5}
+doc: {"d":"x","f":"y","h":"z"}
+
+== scaled_float
+mapping: {"properties":{"f":{"type":"scaled_float","scaling_factor":10,"ignore_malformed":true}}}
+expect: covered
+doc: {"f":1.25}
+doc: {"f":"x"}
+
+== unsigned_long
+mapping: {"properties":{"f":{"type":"unsigned_long","ignore_malformed":true}}}
+expect: covered
+doc: {"f":18446744073709551615}
+doc: {"f":"x"}
+
+== date
+mapping: {"properties":{"f":{"type":"date","ignore_malformed":true},"n":{"type":"date_nanos","ignore_malformed":true}}}
+expect: covered
+doc: {"f":"2020-01-01T00:00:00Z","n":"2020-01-01T00:00:00.123456789Z"}
+doc: {"f":"nope","n":"nope"}
+
+== date null_value
+mapping: {"properties":{"f":{"type":"date","null_value":"2020-01-01"}}}
+expect: covered
+doc: {"f":null}
+
+== boolean
+mapping: {"properties":{"f":{"type":"boolean","ignore_malformed":true}}}
+expect: covered
+doc: {"f":true}
+doc: {"f":[true,false]}
+doc: {"f":"nope"}
+
+== ip
+mapping: {"properties":{"f":{"type":"ip","ignore_malformed":true}}}
+expect: covered
+doc: {"f":"1.2.3.4"}
+doc: {"f":"nope"}
+
+== ip null_value
+mapping: {"properties":{"f":{"type":"ip","null_value":"0.0.0.0"}}}
+expect: covered
+doc: {"f":null}
+
+== geo_point
+mapping: {"properties":{"f":{"type":"geo_point","ignore_malformed":true}}}
+expect: covered
+doc: {"f":{"lat":1.5,"lon":2.5}}
+doc: {"f":"nope"}
+
+== geo_shape
+mapping: {"properties":{"f":{"type":"geo_shape"}}}
+expect: refused geo_shape:fallback
+doc: {"f":{"type":"point","coordinates":[1.0,2.0]}}
+
+== shape
+mapping: {"properties":{"f":{"type":"shape"}}}
+expect: refused shape:fallback
+doc: {"f":{"type":"point","coordinates":[1.0,2.0]}}
+
+== ranges
+mapping: {"properties":{"l":{"type":"long_range"},"i":{"type":"integer_range"},"d":{"type":"double_range"},"f":{"type":"float_range"},"dt":{"type":"date_range"},"ip":{"type":"ip_range"}}}
+expect: covered
+doc: {"l":{"gte":1,"lte":5},"i":{"gte":1,"lte":5},"d":{"gte":1.5,"lte":5.5},"f":{"gte":1.5,"lte":5.5},"dt":{"gte":"2020-01-01T00:00:00.000Z","lte":"2020-02-01T00:00:00.000Z"},"ip":{"gte":"10.0.0.0","lte":"10.0.0.255"}}
+
+== version
+mapping: {"properties":{"f":{"type":"version"}}}
+expect: covered
+doc: {"f":"1.2.3"}
+
+== binary without doc values
+mapping: {"properties":{"f":{"type":"binary"}}}
+expect: refused binary:not-indexed
+doc: {"f":"AAEC"}
+
+== binary doc values
+mapping: {"properties":{"f":{"type":"binary","doc_values":true}}}
+expect: covered
+doc: {"f":"AAEC"}
+
+== binary stored
+mapping: {"properties":{"f":{"type":"binary","store":true}}}
+expect: refused binary:no-native-source
+doc: {"f":"AAEC"}
+
+== flattened plain
+mapping: {"properties":{"f":{"type":"flattened"}}}
+expect: covered
+doc: {"f":{"a":"x","b":{"c":"y"}}}
+
+== flattened ignore_above
+mapping: {"properties":{"f":{"type":"flattened","ignore_above":4}}}
+expect: refused flattened:ignore_above
+doc: {"f":{"a":"xy","b":"longvalue"}}
+
+== flattened index.mapping.ignore_above
+settings: index.mapping.ignore_above=4
+mapping: {"properties":{"f":{"type":"flattened"}}}
+expect: refused flattened:ignore_above
+doc: {"f":{"a":"xy"}}
+
+== histogram
+mapping: {"properties":{"f":{"type":"histogram","ignore_malformed":true}}}
+expect: covered
+doc: {"f":{"values":[0.1,0.2],"counts":[3,7]}}
+doc: {"f":"nope"}
+
+== aggregate_metric_double
+mapping: {"properties":{"f":{"type":"aggregate_metric_double","metrics":["min","max"],"default_metric":"max","ignore_malformed":true}}}
+expect: covered
+doc: {"f":{"min":1.0,"max":2.0}}
+doc: {"f":"nope"}
+
+== dense_vector indexed
+mapping: {"properties":{"f":{"type":"dense_vector","dims":2}}}
+expect: covered
+doc: {"f":[0.5,0.25]}
+
+== dense_vector not indexed
+mapping: {"properties":{"f":{"type":"dense_vector","dims":2,"index":false}}}
+expect: covered
+doc: {"f":[0.5,0.25]}
+
+== sparse_vector
+mapping: {"properties":{"f":{"type":"sparse_vector"}}}
+expect: covered
+doc: {"f":{"t":1.5,"u":0.25}}
+
+== rank_feature
+mapping: {"properties":{"f":{"type":"rank_feature"}}}
+expect: refused rank_feature:fallback
+doc: {"f":1.5}
+
+== rank_features
+mapping: {"properties":{"f":{"type":"rank_features"}}}
+expect: refused rank_features:fallback
+doc: {"f":{"a":1.5}}
+
+== completion
+mapping: {"properties":{"f":{"type":"completion","analyzer":"default","search_analyzer":"default"}}}
+expect: refused completion:fallback
+doc: {"f":"hello"}
+
+== alias
+mapping: {"properties":{"k":{"type":"keyword"},"al":{"type":"alias","path":"k"}}}
+expect: covered
+doc: {"k":"v"}
+
+== object
+mapping: {"properties":{"o":{"properties":{"x":{"type":"keyword"},"y":{"type":"long"}}}}}
+expect: covered
+doc: {"o":{"x":"v","y":1}}
+doc: {"o":[{"x":"a"},{"x":"b","y":2}]}
+
+== object enabled false
+mapping: {"properties":{"o":{"type":"object","enabled":false},"k":{"type":"keyword"}}}
+expect: refused object:enabled-false
+doc: {"k":"v","o":{"anything":1}}
+
+== nested
+mapping: {"properties":{"items":{"type":"nested","properties":{"n":{"type":"keyword"},"q":{"type":"long"}}},"k":{"type":"keyword"}}}
+expect: covered
+doc: {"k":"a","items":[{"n":"x","q":1},{"n":"y"}]}
+doc: {"k":"b","items":{"n":"z"}}
+doc: {"k":"c"}
+
+== nested ignored inside
+mapping: {"properties":{"items":{"type":"nested","properties":{"n":{"type":"keyword","ignore_above":3}}},"k":{"type":"keyword"}}}
+expect: covered
+doc: {"k":"a","items":[{"n":"x"},{"n":"toolong"}]}
+
+== nested constant_keyword
+mapping: {"properties":{"items":{"type":"nested","properties":{"n":{"type":"keyword"},"ck":{"type":"constant_keyword","value":"c"}}}}}
+expect: covered
+doc: {"items":[{"n":"x","ck":"c"},{"n":"y"}]}
+
+== nested keep all
+mapping: {"properties":{"items":{"type":"nested","synthetic_source_keep":"all","properties":{"n":{"type":"keyword"}}}}}
+expect: refused nested:keep-all
+doc: {"items":[{"n":"x"}]}
+
+== passthrough
+mapping: {"properties":{"attrs":{"type":"passthrough","priority":1,"properties":{"x":{"type":"keyword"}}}}}
+expect: covered
+doc: {"attrs":{"x":"v"}}
+
+== dynamic true unmapped values
+mapping: {"properties":{"k":{"type":"keyword"}}}
+expect: covered
+doc: {"k":"a","n":5,"s":"text value","o":{"x":true}}
+
+== dynamic false
+mapping: {"dynamic":false,"properties":{"k":{"type":"keyword"}}}
+expect: refused dynamic:false
+doc: {"k":"a","unmapped":"lost"}
+
+== dynamic runtime
+mapping: {"properties":{"o":{"type":"object","dynamic":"runtime","properties":{"x":{"type":"keyword"}}},"k":{"type":"keyword"}}}
+expect: refused dynamic:runtime
+doc: {"k":"a","o":{"x":"v","y":"w"}}
+
+== dynamic false opt-in
+mapping: {"properties":{"o":{"type":"object","dynamic":false,"properties":{"x":{"type":"keyword"}}},"k":{"type":"keyword"}}}
+expect: optin o.y
+doc: {"k":"a","o":{"x":"v","y":"lost"}}
+
+== dynamic runtime opt-in
+mapping: {"properties":{"o":{"type":"object","dynamic":"runtime","properties":{"x":{"type":"keyword"}}},"k":{"type":"keyword"}}}
+expect: optin o.y
+doc: {"k":"a","o":{"x":"v","y":"w"}}
+
+== field keep all
+mapping: {"properties":{"x":{"type":"keyword","synthetic_source_keep":"all"},"k":{"type":"keyword"}}}
+expect: covered-unordered
+doc: {"k":"a","x":["b","a"]}
+
+== object keep all
+mapping: {"properties":{"o":{"type":"object","synthetic_source_keep":"all","properties":{"x":{"type":"keyword"}}},"k":{"type":"keyword"}}}
+expect: covered
+doc: {"k":"a","o":{"x":"v"}}
+
+== subobjects false
+mapping: {"subobjects":false,"properties":{"a.b":{"type":"keyword"}}}
+expect: covered
+doc: {"a.b":"v"}
+
+== field limit ignore beyond
+settings: index.mapping.total_fields.limit=2;index.mapping.total_fields.ignore_dynamic_beyond_limit=true
+mapping: {"properties":{"k":{"type":"keyword"}}}
+expect: covered
+doc: {"k":"a","n1":1,"n2":2,"n3":3}
+
+== created 8.17 keyword ignore_above and constant
+settings: index.version.created=8521000
+mapping: {"properties":{"k":{"type":"keyword","ignore_above":3},"t":{"type":"text","fields":{"raw":{"type":"keyword","ignore_above":3}}},"ck":{"type":"constant_keyword","value":"c"}}}
+expect: covered
+doc: {"k":"toolong","t":"toolong","ck":"c"}
+doc: {"k":"ok","t":"ok"}
+
+== created 8.10 ignored as postings
+settings: index.version.created=8500003
+mapping: {"properties":{"k":{"type":"keyword","ignore_above":3},"n":{"type":"long","ignore_malformed":true}}}
+expect: covered
+doc: {"k":"toolong","n":"x"}
+doc: {"k":"ok","n":1}
+
+== index-time script
+mapping: {"properties":{"k":{"type":"keyword"},"s":{"type":"long","script":{"source":"emit(1)"}}}}
+expect: unbuildable
+doc: {"k":"a"}
+
+== sparse_vector created 8.17
+settings: index.version.created=8521000
+mapping: {"properties":{"f":{"type":"sparse_vector"}}}
+expect: refused sparse_vector:fallback
+doc: {"f":{"t":1.5,"u":0.25}}
+
+== tombstone is not unmapped
+mapping: {"properties":{"k":{"type":"keyword"}}}
+inject: tombstone
+expect: covered
+doc: {"k":"a"}
+
+== unmapped field info
+mapping: {"properties":{"k":{"type":"keyword"}}}
+inject: stray
+expect: refused unmapped
+doc: {"k":"a"}
+
+== keyword whose every value was deleted and merged away
+mapping: {"properties":{"k":{"type":"keyword"},"n":{"type":"long"}}}
+inject: delete 0
+expect: covered
+doc: {"k":"x","n":1}
+doc: {"n":2}
+doc: {"n":3}
+
+== text keyword sub-field added later
+mapping: {"properties":{"t":{"type":"text"},"n":{"type":"long"}}}
+expect: refused text:no-native-source
+preflight: none
+doc: {"t":"lost words","n":1}
+update: {"properties":{"t":{"type":"text","fields":{"raw":{"type":"keyword"}}}}}
+doc: {"t":"kept words","n":2}
+
+== text keyword sub-field added later, empty text value
+mapping: {"properties":{"t":{"type":"text"},"n":{"type":"long"}}}
+expect: refused text:no-native-source
+preflight: none
+doc: {"t":"","n":1}
+update: {"properties":{"t":{"type":"text","fields":{"raw":{"type":"keyword"}}}}}
+doc: {"t":"kept words","n":2}
+
+== match_only_text keyword sub-field added later
+mapping: {"properties":{"t":{"type":"match_only_text"},"n":{"type":"long"}}}
+expect: refused match_only_text:no-native-source
+preflight: none
+doc: {"t":"lost words","n":1}
+update: {"properties":{"t":{"type":"match_only_text","fields":{"raw":{"type":"keyword"}}}}}
+doc: {"t":"kept words","n":2}
+
+== text keyword sub-field added later, earlier documents without text
+mapping: {"properties":{"t":{"type":"text"},"n":{"type":"long"}}}
+expect: covered
+doc: {"n":1}
+update: {"properties":{"t":{"type":"text","fields":{"raw":{"type":"keyword"}}}}}
+doc: {"t":"kept words","n":2}
+
+== text keyword sub-field added later, the earlier document deleted
+mapping: {"properties":{"t":{"type":"text"},"n":{"type":"long"}}}
+inject: delete 0
+expect: covered
+doc: {"t":"gone words","n":1}
+update: {"properties":{"t":{"type":"text","fields":{"raw":{"type":"keyword"}}}}}
+doc: {"t":"kept words","n":2}
+doc: {"n":3}
+
+== text keyword sub-field added later, every later value deleted
+mapping: {"properties":{"t":{"type":"text"},"n":{"type":"long"}}}
+inject: delete 2
+expect: refused text:no-native-source
+preflight: none
+doc: {"t":"lost words","n":1}
+update: {"properties":{"t":{"type":"text","fields":{"raw":{"type":"keyword"}}}}}
+doc: {"t":"deleted words","n":2}
+doc: {"n":3}
+
+== text keyword sub-field ignore_above in nested objects
+mapping: {"properties":{"o":{"type":"nested","properties":{"t":{"type":"text","fields":{"raw":{"type":"keyword","ignore_above":3}}}}}}}
+expect: covered
+doc: {"o":[{"t":"toolong"},{"t":"ok"}]}
+doc: {"o":{"t":"ok"}}
+
+== match_only_text keyword sub-field added later, zero-token value
+mapping: {"properties":{"t":{"type":"match_only_text"},"n":{"type":"long"}}}
+expect: refused match_only_text:no-native-source
+preflight: none
+doc: {"t":"-","n":1}
+update: {"properties":{"t":{"type":"match_only_text","fields":{"raw":{"type":"keyword"}}}}}
+doc: {"t":"kept words","n":2}
+
+== match_only_text keyword sub-field added later, empty value
+mapping: {"properties":{"t":{"type":"match_only_text"},"n":{"type":"long"}}}
+expect: refused match_only_text:no-native-source
+preflight: none
+doc: {"t":"","n":1}
+update: {"properties":{"t":{"type":"match_only_text","fields":{"raw":{"type":"keyword"}}}}}
+doc: {"t":"kept words","n":2}
+
+== text without norms keyword sub-field added later, zero-token value
+mapping: {"properties":{"t":{"type":"text","norms":false},"n":{"type":"long"}}}
+expect: refused text:no-native-source
+preflight: none
+doc: {"t":"...","n":1}
+update: {"properties":{"t":{"type":"text","norms":false,"fields":{"raw":{"type":"keyword"}}}}}
+doc: {"t":"kept words","n":2}
+
+== text without norms keyword sub-field added later
+mapping: {"properties":{"t":{"type":"text","norms":false},"n":{"type":"long"}}}
+expect: refused text:no-native-source
+preflight: none
+doc: {"t":"lost words","n":1}
+update: {"properties":{"t":{"type":"text","norms":false,"fields":{"raw":{"type":"keyword"}}}}}
+doc: {"t":"kept words","n":2}
+
+== match_only_text keyword sub-field from creation, zero-token values
+mapping: {"properties":{"t":{"type":"match_only_text","fields":{"raw":{"type":"keyword"}}},"n":{"type":"long"}}}
+expect: covered
+pruned: match_only_text:no-native-source
+doc: {"t":"-","n":1}
+doc: {"t":"","n":2}
+doc: {"t":"kept words","n":3}
+
+== match_only_text keyword sub-field added later, the zero-token document deleted
+mapping: {"properties":{"t":{"type":"match_only_text"},"n":{"type":"long"}}}
+inject: delete 0
+expect: covered
+pruned: match_only_text:no-native-source
+doc: {"t":"-","n":1}
+update: {"properties":{"t":{"type":"match_only_text","fields":{"raw":{"type":"keyword"}}}}}
+doc: {"t":"kept words","n":2}
+
+== created 8.10 nested text keyword sub-field ignore_above
+settings: index.version.created=8500003
+mapping: {"properties":{"o":{"type":"nested","properties":{"t":{"type":"text","fields":{"raw":{"type":"keyword","ignore_above":3}}}}}}}
+expect: covered
+doc: {"o":[{"t":"toolong"},{"t":"ok"}]}
+doc: {"o":{"t":"ok"}}
+
+== created 8.10 text keyword sub-field added later, another field ignored
+settings: index.version.created=8500003
+mapping: {"properties":{"t":{"type":"text"},"k":{"type":"keyword","ignore_above":2}}}
+expect: refused text:no-native-source
+preflight: none
+doc: {"t":"lost words","k":"toolong"}
+update: {"properties":{"t":{"type":"text","fields":{"raw":{"type":"keyword"}}}}}
+doc: {"t":"kept words","k":"ok"}
+
+== text without norms keyword sub-field from creation, zero-token value
+mapping: {"properties":{"t":{"type":"text","norms":false,"fields":{"raw":{"type":"keyword"}}},"n":{"type":"long"}}}
+expect: covered
+pruned: text:no-native-source
+doc: {"t":"...","n":1}
+doc: {"t":"kept words","n":2}

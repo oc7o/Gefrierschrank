@@ -1,0 +1,631 @@
+{
+  "_comment" : "Captured with the 1.0.0 lucene9 worker path (WorkerLineReader envelope, index metadata passed) from gefrierschrank-cli-1.0.0.jar/gefrierschrank-lucene9-1.0.0.jar.",
+  "es7_features" : {
+    "snapshot" : "RmYeVQx3S2u53fXb992NeA",
+    "shard" : 0,
+    "runtime_1_0_0" : "lucene9",
+    "written_by" : [ "8.11.1" ],
+    "rows" : [ {
+      "_id" : "1",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 2,
+      "sha256" : "178f74849643fdd620d59e00d1dc9d1bf3a8053c8bd092d2db5e1e6593111fbf"
+    }, {
+      "_id" : "42",
+      "_routing" : "route-1",
+      "_source_kind" : "stored",
+      "_doc" : 3,
+      "sha256" : "b05c3f213cc2ea61f2a3d2099d74d47cafa85c4261a9c63c273857c4b89290ab"
+    }, {
+      "_id" : "dGVzdC1pZA",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 6,
+      "sha256" : "a48444089a5b8e443c5d178ca4b5fc03dabab973fc4531742ee9303f99ead8ac"
+    }, {
+      "_id" : "_-8",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 10,
+      "sha256" : "85a674429f081a55d3ce9d528ec4fc380b9b13c2f4822ffe7625d1c62b88a194"
+    }, {
+      "_id" : "user@example.com",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 12,
+      "sha256" : "bfd2e645e8e6d1e40476ecaf654e5487b36b411977d61486e52ae5badef388ed"
+    }, {
+      "_id" : "ümlaut-ß",
+      "_routing" : "route-0",
+      "_source_kind" : "stored",
+      "_doc" : 13,
+      "sha256" : "2cf13f5df2874a82d3ff1cec04165e5b932c0bdb54d4d04c8d569da981ead1a6"
+    }, {
+      "_id" : "漢字",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 17,
+      "sha256" : "c42643d21f89da62032ba9862b179ada83e1b59e3bf75274a6445b73506cdb8f"
+    }, {
+      "_id" : "a",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 18,
+      "sha256" : "18f651cc14f103157a21aad21b3d0305ec301403ed09dd71ed0b8b8b3f3d2467"
+    }, {
+      "_id" : "-",
+      "_routing" : "route-1",
+      "_source_kind" : "stored",
+      "_doc" : 19,
+      "sha256" : "546e04f25fa4818a78604e7b787ee3f7039446042fd4f632fd157f1853b0d5bb"
+    }, {
+      "_id" : "doc-14",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 20,
+      "sha256" : "a9a01a9f5011d28cfa9177b00162ade83509902284942cfdc0701c410c0d0873"
+    }, {
+      "_id" : "doc-15",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 23,
+      "sha256" : "f1fe9ada8e6bd92d990eeee06e55adcfed470fb40754593db562d3074598712d"
+    }, {
+      "_id" : "doc-16",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 24,
+      "sha256" : "68b8e559a91ba21e4eb2946536e19c501887c9379e117625189df81dfc678477"
+    }, {
+      "_id" : "doc-17",
+      "_routing" : "route-2",
+      "_source_kind" : "stored",
+      "_doc" : 25,
+      "sha256" : "32febdbe953e97098e945f7b880702f5f727ca355cf7531611c613197d995773"
+    }, {
+      "_id" : "doc-18",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 26,
+      "sha256" : "014a8de7de05fd0ad2b1fcc2446950397a7b4ba2ea5d91d4fd531ba3d51d86f2"
+    }, {
+      "_id" : "doc-19",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 27,
+      "sha256" : "f50d62a3b3bb1258d185f02a7cd9044a431094332bcf124e1c468ea74a53768c"
+    }, {
+      "_id" : "doc-20",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 30,
+      "sha256" : "01f2581f3d852dfec841d721af05d733ec4cdc59f12959048f52aacf024e6e45"
+    }, {
+      "_id" : "doc-22",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 32,
+      "sha256" : "3bf345227d9836fbfdf3bccaf8cbc3f69607ac380644aba8c53f471e93bd85a5"
+    }, {
+      "_id" : "doc-23",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 33,
+      "sha256" : "e8143d05483316fe5aeef25907e3eaafb77314ccd772a643c3306b363d9cf253"
+    }, {
+      "_id" : "doc-24",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 34,
+      "sha256" : "c392eb6e9313a608adf6a78d82c50a671f8fcef9d0f1fd7796ac957e2568a137"
+    }, {
+      "_id" : "doc-26",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 38,
+      "sha256" : "b3922b38da9c236d0cd1ef22c8726eab281c0941c1c5f0baede37966209a5503"
+    }, {
+      "_id" : "doc-27",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 39,
+      "sha256" : "3060fbb999a4a25c6dc88aaf973dad6de37482962a58168c5bdcac97057ff63a"
+    }, {
+      "_id" : "doc-28",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 40,
+      "sha256" : "5a1933adc65fe0dac80eaefa3db420873d9c0b1ea8eaf7348f237f6a57afbcf4"
+    }, {
+      "_id" : "doc-29",
+      "_routing" : "route-2",
+      "_source_kind" : "stored",
+      "_doc" : 41,
+      "sha256" : "af5bba75c4b5f23ec702ab288d8338ca0189b0860d268a3cac982e9f9524cc3d"
+    }, {
+      "_id" : "doc-30",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 44,
+      "sha256" : "0fce608dd0ea6634401e9986446022ca7170f58d360bb00660062bf8ec46db78"
+    }, {
+      "_id" : "doc-31",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 45,
+      "sha256" : "9c2d1a26fe5a95e944a0764c86de7f378c236233dc971a69954bb9d153ce4e0c"
+    }, {
+      "_id" : "doc-32",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 46,
+      "sha256" : "dfdc099e17fdc4d68d3f324c09ad6dff6007f1bea80d1cd5fd1acc49c48b1bea"
+    }, {
+      "_id" : "doc-34",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 48,
+      "sha256" : "4f855de17e9848c77c8639087db14647969f6f917840bedc7d773bab75632671"
+    }, {
+      "_id" : "doc-35",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 51,
+      "sha256" : "ac8c9cdd1fc38c9baa9d03c4eac096cb07a587e67ba511fece82eb681fcf1237"
+    }, {
+      "_id" : "doc-36",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 52,
+      "sha256" : "3aa3360c5f47e52d828a3ccd5ba8fd6f401ab5f212b4634de995de9caf8d8d1c"
+    }, {
+      "_id" : "doc-37",
+      "_routing" : "route-1",
+      "_source_kind" : "stored",
+      "_doc" : 53,
+      "sha256" : "77119d0b8a402dfc8fc456396e99026c6fc12ce17e53f4869a55cf43f137659d"
+    }, {
+      "_id" : "doc-38",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 54,
+      "sha256" : "dadedaa4c396492c96e9147cf6d9aa46844652a26f9cbd6cb78bd9dbe73fb1ae"
+    }, {
+      "_id" : "doc-39",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 55,
+      "sha256" : "58a83514eb5407526ec9caf1a4ae602209be3273aa69015b3f8c83229513799d"
+    }, {
+      "_id" : "doc-40",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 58,
+      "sha256" : "e8e41b9f4e917eca58eecc7b3924ae171e3410f187de07f9057cd9f496a54c84"
+    }, {
+      "_id" : "doc-41",
+      "_routing" : "route-2",
+      "_source_kind" : "stored",
+      "_doc" : 59,
+      "sha256" : "7d35ffb8506d41072a8a52bc50b5c9220c32f23d79b1eaa9e45436408d494fe9"
+    }, {
+      "_id" : "doc-42",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 60,
+      "sha256" : "d559ba237448d6e7889566ba78227bc853d97534e6be6292cc1f3fc0032d5840"
+    }, {
+      "_id" : "doc-43",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 61,
+      "sha256" : "45ef7f986edfc4a0677c94cd0b97c88807ca9c859b641d804ebc21d891a679c0"
+    }, {
+      "_id" : "doc-44",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 62,
+      "sha256" : "75bcaaa9eca694f21611bbc6a7a37f3a4766f9940f5c6c851f73eb2aec2efeef"
+    }, {
+      "_id" : "doc-45",
+      "_routing" : "route-0",
+      "_source_kind" : "stored",
+      "_doc" : 65,
+      "sha256" : "99385b7ca918f6ac208173b4026a73b2ec620af8e49d968256f78b93868940ea"
+    }, {
+      "_id" : "doc-46",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 66,
+      "sha256" : "9ec8c3651a0e31bc8ce4cdf09f3c27ad73c204a435fa0cbbe7e76132f1d5e7cf"
+    }, {
+      "_id" : "doc-47",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 67,
+      "sha256" : "76951f13e61eba8ce9522d992a3ab8f9b11949815d10b5b57802e07cdac298e8"
+    }, {
+      "_id" : "doc-48",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 68,
+      "sha256" : "6e90fcfe3af8deea54b89c819b68deaf9f41ec1390282a7d31f62d57a75af6fd"
+    }, {
+      "_id" : "doc-49",
+      "_routing" : "route-1",
+      "_source_kind" : "stored",
+      "_doc" : 69,
+      "sha256" : "e1d9668b5e2b3c498dfea072b4a1f17c560c625fb48426b6e1d621930a262dee"
+    }, {
+      "_id" : "doc-50",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 72,
+      "sha256" : "94188eb9035d0b026e67906baffbe8416cf4a96592faef815c68a4841ac70b71"
+    }, {
+      "_id" : "doc-51",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 73,
+      "sha256" : "0dbaca3ce514af6ca9efd2a7867247f318fa792e5ef2a77542e577c12070729a"
+    }, {
+      "_id" : "doc-52",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 74,
+      "sha256" : "b6ea068e06fc71cb07dd7d2264e577def489c97a2a19174036d12594cc92f4ce"
+    }, {
+      "_id" : "doc-53",
+      "_routing" : "route-2",
+      "_source_kind" : "stored",
+      "_doc" : 75,
+      "sha256" : "1c315110f0b7b1b6b91de763d72db5255daaf058b9c01c8e23d397f9a4518fd9"
+    }, {
+      "_id" : "doc-54",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 76,
+      "sha256" : "546befe8f47d389291f8c8dfc2797530f3be2b72d7003cb55669ff6faffb238c"
+    }, {
+      "_id" : "doc-55",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 79,
+      "sha256" : "1d76090664f8395205a83bdf7ca3c37b3950a2c87fc4e9ef012e0713eb8adae9"
+    }, {
+      "_id" : "doc-56",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 80,
+      "sha256" : "9e0be822b70a71b49da81696dbd1fd29e0024a11ec721e8cb34b9cbb72f127af"
+    }, {
+      "_id" : "doc-57",
+      "_routing" : "route-0",
+      "_source_kind" : "stored",
+      "_doc" : 81,
+      "sha256" : "0ef1b9bb54d7953435b9903b83b63177a851da990cf5e11bc0d71fb747a9433c"
+    }, {
+      "_id" : "doc-58",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 82,
+      "sha256" : "a83bfc3f7b8eea9dedb23c94364374a63d5d0e03e92570b50e31cafa0678b8eb"
+    }, {
+      "_id" : "doc-59",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 83,
+      "sha256" : "b83d5f9791c9abb96275e84dc4acf898c6cca0cb260eba950b533f50507c5322"
+    }, {
+      "_id" : "OrPT5KABWCFYJPoKhf3z",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 84,
+      "sha256" : "ea9ef1592162d3c43c1d9682a66ba2c9831646b8afc23e57d5c05b713a292e58"
+    }, {
+      "_id" : "O7PT5KABWCFYJPoKhf30",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 85,
+      "sha256" : "f89d42769a7309aa7befe8b44b49fe6a5287610b57bb46614de612905ec82cbc"
+    }, {
+      "_id" : "PLPT5KABWCFYJPoKhf30",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 86,
+      "sha256" : "b540a8bb860cf792b91a87f414c3c32f79c8303a24f9f2a1e6f968a382d80153"
+    }, {
+      "_id" : "PbPT5KABWCFYJPoKhf30",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 87,
+      "sha256" : "c65cac004640a31a1cdb2319a73d684049be182704d1da2e623d185f56a37b35"
+    }, {
+      "_id" : "pretty",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 88,
+      "sha256" : "05ff609d4906142db22312917f1307ac022cb3c15685ccc1f3f0575311ff8381"
+    }, {
+      "_id" : "9007199254740993",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 89,
+      "sha256" : "a1c46fcc02039a2c9bf3d48404fe7fc80d8eb253af39fe8223e6c27aaea08b0a"
+    }, {
+      "_id" : "_w",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 92,
+      "sha256" : "73fd9248a8f0e81487acf33bbffc2ea0cb4484acc2df04698f58599fe476c523"
+    }, {
+      "_id" : "id with spaces",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 95,
+      "sha256" : "c2b7b0b3993e2a7b829ae6ec695146e54c6a439adbe7a17ae84eaf9536afd236"
+    }, {
+      "_id" : "doc-21",
+      "_routing" : "route-0",
+      "_source_kind" : "stored",
+      "_doc" : 96,
+      "sha256" : "f497fa3f2cb544a17db231b573cb9debb91837d7a45ff0d77597e3beed0e28e3"
+    } ]
+  },
+  "es7_hard_deletes" : {
+    "snapshot" : "RmYeVQx3S2u53fXb992NeA",
+    "shard" : 0,
+    "runtime_1_0_0" : "lucene9",
+    "written_by" : [ "8.11.1" ],
+    "rows" : [ {
+      "_id" : "0",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 0,
+      "sha256" : "94f029f56e357f113112022feca678c44a10e6795bb7191ec2d30f5e7c974a4b"
+    }, {
+      "_id" : "2",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 2,
+      "sha256" : "35ac3a23b5177acc910f08afff66d57b65a18618f1fc6b71a6207d3b464d24da"
+    }, {
+      "_id" : "3",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 3,
+      "sha256" : "b688f6c190798401e08e1fd13f5609612e4f548973e00da564aaa6489814b649"
+    }, {
+      "_id" : "5",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 5,
+      "sha256" : "7d72cb4812fc5995f1a2abca993cb56db4f79d0197eafb2ec1aa1560d3c2532e"
+    }, {
+      "_id" : "6",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 6,
+      "sha256" : "782dffb5e77e33731e4d189f18ce7abfee7161ad4c97d2add112f9e5e753ca1e"
+    }, {
+      "_id" : "7",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 7,
+      "sha256" : "4ca1da788cedd2501334b121675beb7a3029f89c4bc9ac8f4cc45baaef9543ce"
+    }, {
+      "_id" : "8",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 8,
+      "sha256" : "3a3dcacc70e297cc7cd2f47d7b07dfb093d2a3fffd48c962b8363d7acd54dc1a"
+    }, {
+      "_id" : "9",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 9,
+      "sha256" : "29883141d3be08b4d66f355a64dbdc1a34987d7c50a74ce3c857cb208e4fb3e1"
+    }, {
+      "_id" : "10",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 10,
+      "sha256" : "89ff959ba194b617fdfc58358356ddc2d8dbb27ebd61bb4720522ffb5812bb03"
+    }, {
+      "_id" : "11",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 11,
+      "sha256" : "f71308b8de6c2d1ddbb360ee1198636854ef43f4b1282bbcf932a4c85028d292"
+    }, {
+      "_id" : "12",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 12,
+      "sha256" : "be7ac98ea93fe0672b0a7a018ff2af79d159b860e1b8b5b1e6e7e77be7d1b075"
+    }, {
+      "_id" : "13",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 13,
+      "sha256" : "59205e67e59712d5325d8e44dde115c0c6dc9df25ba3cc7cfba2852f41e0c618"
+    }, {
+      "_id" : "14",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 14,
+      "sha256" : "a2db840047ec81ddd0584d669a921bde999904567ea6e28c73094e83352d9a46"
+    }, {
+      "_id" : "15",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 15,
+      "sha256" : "80e546060b698a62c4d44aa8efc4d9d7e2b4c82bc5cae3018a0ee9ed223effaa"
+    }, {
+      "_id" : "17",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 17,
+      "sha256" : "26b1f5cffface1edc7b85663e2f1afcb8b3138a0d3fe71902ab599813c273ed5"
+    }, {
+      "_id" : "18",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 18,
+      "sha256" : "ef0c80684aca61a25021351cab1c315a2b875e1b65f3b40584fd5e02dad13e93"
+    }, {
+      "_id" : "19",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 19,
+      "sha256" : "b3bf5274117c72fdc62fe0264b592f91f3eeba7c3e425584df1ddaaeca9e455d"
+    }, {
+      "_id" : "21",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 21,
+      "sha256" : "2524ad1c4b1bdda529c2be4cbe78e65a0d2238eb4b3ed072860baf5c6f271209"
+    }, {
+      "_id" : "22",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 22,
+      "sha256" : "bc44d376d4236f5ce34749cd3d3f7b1109968e8b6e2a216f9ad5ba14b43e444a"
+    }, {
+      "_id" : "23",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 23,
+      "sha256" : "a571d3ea413063248bc636225ea656611a3d7dbded40f9adba053df0cb4081b0"
+    }, {
+      "_id" : "24",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 24,
+      "sha256" : "8f6c3f50b7c14f489f807e78624bb584bb779b9c785839292ade5d5c85ec46fd"
+    }, {
+      "_id" : "25",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 25,
+      "sha256" : "2bbbfe83f3b6a0c3c3eae38ed9abcee858be37ae1f3a89457e9a02363ad301d4"
+    }, {
+      "_id" : "26",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 26,
+      "sha256" : "e1ffbbc27c966a78aa679c8d75d2f73b4b6060e763bc0f2eaddb2b077095ad54"
+    }, {
+      "_id" : "27",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 27,
+      "sha256" : "9f4ce7b3c7da8e8b1ea35e69c76aee248220d41b18f79b288dec73f408f57eab"
+    }, {
+      "_id" : "28",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 28,
+      "sha256" : "4824727da319665c5201836dbdb1d99eb0bca768521a8ebc1472f99a6affc98c"
+    }, {
+      "_id" : "4",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 30,
+      "sha256" : "087169854f9cf1c04cc1a2a7277a647feededc42bfed13d82a66b2fc87b01a4b"
+    }, {
+      "_id" : "20",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 31,
+      "sha256" : "5c701d4afc5cc4a432e3ec4112fbdb1e80f00665bd617c02c338bc98bdebddc0"
+    } ]
+  },
+  "es7_completion" : {
+    "snapshot" : "RmYeVQx3S2u53fXb992NeA",
+    "shard" : 0,
+    "runtime_1_0_0" : "lucene9",
+    "written_by" : [ "8.11.1" ],
+    "rows" : [ {
+      "_id" : "c0",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 0,
+      "sha256" : "de6d1ea8a326f5a9387fd02f5e98fa5fb84f5e2552d91357447f8de0c4309d8a"
+    }, {
+      "_id" : "c1",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 1,
+      "sha256" : "d13ea8b15029e16b2ce41c496d5a985fcaaa278bde515af6f29ec57513ed1a77"
+    }, {
+      "_id" : "c2",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 2,
+      "sha256" : "8caacbc738716e62cc6426a4588800784384a6f96390fa9fc8f5dd4f2605db57"
+    }, {
+      "_id" : "c3",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 3,
+      "sha256" : "941ba2eabae36152b4aca012b34cc1efc9eba163d1c3fd32f4df16954f44cad2"
+    }, {
+      "_id" : "c4",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 4,
+      "sha256" : "abde29f66d51ae908fe0c7e342049153a9171516f220003724a3c7838eb16d15"
+    }, {
+      "_id" : "c5",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 5,
+      "sha256" : "25b70f61fbc01aae1fdc22fd1c4915cdcbab153de7e566c062aeb4de52b6d0ba"
+    }, {
+      "_id" : "c6",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 6,
+      "sha256" : "55f5b3817977816cf208e460c552ab04fac91cce9753c43a18c22f8b0af58822"
+    }, {
+      "_id" : "c7",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 7,
+      "sha256" : "2a163efb757bcba6920201149f8488b32452c499fc42902854cc9eedc34899b5"
+    }, {
+      "_id" : "c8",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 8,
+      "sha256" : "a943853a26339d396623d21b57e16a00754341835684e8e03da32925460eeb88"
+    }, {
+      "_id" : "c9",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 9,
+      "sha256" : "dce1891126959b6b3d541bd2c11536f435b5d31b98eddec2fac311d630165ebd"
+    }, {
+      "_id" : "c10",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 10,
+      "sha256" : "e48606d8b6d73e4e72d0b50c758e7444666aa162f0f718d3f6dd14ac8903765f"
+    }, {
+      "_id" : "c11",
+      "_routing" : null,
+      "_source_kind" : "stored",
+      "_doc" : 11,
+      "sha256" : "6fdb4ff41caa6706b0b5f509ee05f3c77716b63647598090232adde5ff8679f2"
+    } ]
+  },
+  "es7_no_source" : {
+    "snapshot" : "RmYeVQx3S2u53fXb992NeA",
+    "shard" : 0,
+    "runtime_1_0_0" : "lucene9",
+    "written_by" : [ "8.11.1" ],
+    "failure" : "java.io.IOException"
+  }
+}

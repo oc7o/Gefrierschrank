@@ -1,0 +1,3110 @@
+{
+ "test_deletes_lz4": {
+  "deleted_ids": [
+   "d-00003",
+   "d-00013",
+   "d-00023",
+   "d-00033",
+   "d-00043",
+   "d-00053",
+   "d-00063",
+   "d-00073",
+   "d-00083",
+   "d-00093",
+   "d-00103",
+   "d-00113"
+  ],
+  "updated_ids": [
+   "d-00006",
+   "d-00021",
+   "d-00036",
+   "d-00051",
+   "d-00066",
+   "d-00081",
+   "d-00096",
+   "d-00111"
+  ],
+  "sources": {
+   "d-00000": {
+    "@timestamp": "2026-05-01T00:00:00.000Z",
+    "bytes": 2108732,
+    "host": "web-01.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 0,
+     "zone": "z0"
+    },
+    "message": "event 000: field elastic refresh tier stored decompress field connection shard field.",
+    "note": "café crème",
+    "status": 200,
+    "tag": "t0",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00001": {
+    "@timestamp": "2026-05-02T01:07:13.000Z",
+    "bytes": 4995903,
+    "host": "web-02.example.internal",
+    "message": "event 001: stored elastic backend retry gateway timeout refresh refresh.",
+    "status": 201,
+    "tag": "🚀 over-the-limit-tag-0001"
+   },
+   "d-00002": {
+    "@timestamp": "2026-05-03T02:14:26.000Z",
+    "bytes": 923468,
+    "host": "web-03.example.internal",
+    "message": "event 002: block miss elastic timeout snapshot repository replica payload lucene shard flush repository replica handshake served handshake tier stored served gateway upstream codec segment connection.",
+    "status": 404
+   },
+   "d-00004": {
+    "@timestamp": "2026-05-05T04:28:52.000Z",
+    "bytes": 109078,
+    "host": "web-05.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 4,
+     "zone": "z1"
+    },
+    "message": "event 004: replica checksum refresh latency request frozen miss gateway client latency field stored shard timeout gateway payload repository checksum segment refresh handshake block shard retry.",
+    "status": 503,
+    "tag": "🚀 over-the-limit-tag-0004"
+   },
+   "d-00005": {
+    "@timestamp": "2026-05-06T05:35:05.000Z",
+    "bytes": 1380431,
+    "host": "web-01.example.internal",
+    "message": "event 005: segment compress field pool elastic refresh field snapshot miss cache repository.",
+    "status": 200,
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00006": {
+    "@timestamp": "2026-05-07T06:42:18.000Z",
+    "bytes": 3713851,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "updated"
+    },
+    "message": "event 006: decompress upstream shard field tier merge client shard frozen frozen pool tier latency request pool miss served stored refresh timeout upstream.",
+    "status": 404,
+    "tag": "t6"
+   },
+   "d-00007": {
+    "@timestamp": "2026-05-08T07:49:31.000Z",
+    "bytes": 4733167,
+    "host": "web-03.example.internal",
+    "message": "event 007: miss upstream merge lucene timeout cache connection replica handshake codec cache field gateway segment repository block retry snapshot compress tier.",
+    "note": "😀 grinning",
+    "status": 404,
+    "tag": "🚀 over-the-limit-tag-0007"
+   },
+   "d-00008": {
+    "@timestamp": "2026-05-09T08:56:44.000Z",
+    "bytes": 1423097,
+    "host": "web-04.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 1,
+     "zone": "z2"
+    },
+    "message": "event 008: snapshot snapshot segment checksum compress replica field upstream handshake merge.",
+    "status": 500
+   },
+   "d-00009": {
+    "@timestamp": "2026-05-10T09:03:57.000Z",
+    "bytes": 4256505,
+    "host": "web-05.example.internal",
+    "message": "event 009: gateway upstream timeout stored checksum compress timeout miss request cache gateway elastic decompress decompress checksum upstream stored upstream.",
+    "status": 503,
+    "tag": "t9"
+   },
+   "d-00010": {
+    "@timestamp": "2026-05-11T10:10:10.000Z",
+    "bytes": 2696394,
+    "host": "web-01.example.internal",
+    "message": "event 010: codec decompress compress compress shard checksum merge gateway.",
+    "status": 200,
+    "tag": "🚀 over-the-limit-tag-0010",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00011": {
+    "@timestamp": "2026-05-12T11:17:23.000Z",
+    "bytes": 1887245,
+    "host": "web-02.example.internal",
+    "labels": {
+     "zone": "z2"
+    },
+    "message": "event 011: latency pool frozen retry connection timeout served elastic cache connection served payload elastic.",
+    "status": 201
+   },
+   "d-00012": {
+    "@timestamp": "2026-05-13T12:24:36.000Z",
+    "bytes": 2555361,
+    "host": "web-03.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 5,
+     "zone": "z0"
+    },
+    "message": "event 012: payload served repository backend stored replica elastic repository tier checksum tier snapshot lucene.",
+    "status": 404,
+    "tag": "t12"
+   },
+   "d-00014": {
+    "@timestamp": "2026-05-15T14:38:02.000Z",
+    "bytes": 4380135,
+    "host": "web-05.example.internal",
+    "message": "event 014: compress tier backend cache miss refresh gateway latency latency shard compress.",
+    "note": "日本語",
+    "status": 503
+   },
+   "d-00015": {
+    "@timestamp": "2026-05-16T15:45:15.000Z",
+    "bytes": 4952933,
+    "host": "web-01.example.internal",
+    "message": "event 015: refresh pool checksum request served retry client block refresh gateway timeout refresh backend field flush timeout.",
+    "status": 200,
+    "tag": "t15",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00016": {
+    "@timestamp": "2026-05-17T16:52:28.000Z",
+    "bytes": 1768319,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 2,
+     "zone": "z1"
+    },
+    "message": "event 016: block block lucene gateway stored checksum timeout compress lucene latency.",
+    "status": 201,
+    "tag": "🚀 over-the-limit-tag-0016"
+   },
+   "d-00017": {},
+   "d-00018": {
+    "@timestamp": "2026-05-19T18:06:54.000Z",
+    "bytes": 3240310,
+    "host": "web-04.example.internal",
+    "message": "event 018: upstream served segment elastic served client field flush upstream handshake upstream client payload snapshot lucene tier replica client lucene checksum request.",
+    "status": 500,
+    "tag": "t18"
+   },
+   "d-00019": {
+    "@timestamp": "2026-05-20T19:13:07.000Z",
+    "bytes": 728744,
+    "host": "web-05.example.internal",
+    "message": "event 019: frozen elastic request flush replica backend checksum tier cache timeout.",
+    "status": 503,
+    "tag": "🚀 over-the-limit-tag-0019"
+   },
+   "d-00020": {
+    "@timestamp": "2026-05-21T20:20:20.000Z",
+    "bytes": 1544860,
+    "host": "web-01.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 6,
+     "zone": "z2"
+    },
+    "message": "event 020: timeout frozen latency block pool cache elastic elastic flush client.",
+    "status": 200,
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00021": {
+    "@timestamp": "2026-05-22T21:27:33.000Z",
+    "bytes": 481792,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "updated"
+    },
+    "message": "event 021: block codec repository merge client retry connection codec timeout latency retry request miss elastic payload served.",
+    "note": "rocket 🚀🚀",
+    "status": 404,
+    "tag": "t21"
+   },
+   "d-00022": {
+    "@timestamp": "2026-05-23T22:34:46.000Z",
+    "bytes": 4299194,
+    "host": "web-03.example.internal",
+    "labels": {
+     "zone": "z1"
+    },
+    "message": "event 022: gateway repository block gateway upstream shard latency client segment frozen handshake segment served connection request payload repository miss cache.",
+    "status": 404,
+    "tag": "🚀 over-the-limit-tag-0022"
+   },
+   "d-00024": {
+    "@timestamp": "2026-05-25T00:48:12.000Z",
+    "bytes": 1748986,
+    "host": "web-05.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 3,
+     "zone": "z0"
+    },
+    "message": "event 024: repository stored snapshot replica block gateway lucene retry field block.",
+    "status": 503,
+    "tag": "t24"
+   },
+   "d-00025": {
+    "@timestamp": "2026-05-26T01:55:25.000Z",
+    "bytes": 690276,
+    "host": "web-01.example.internal",
+    "message": "event 025: codec compress retry stored block checksum stored backend replica upstream.",
+    "status": 200,
+    "tag": "🚀 over-the-limit-tag-0025",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00026": {
+    "@timestamp": "2026-05-27T02:02:38.000Z",
+    "bytes": 1328995,
+    "host": "web-02.example.internal",
+    "message": "event 026: request frozen frozen miss cache refresh served pool compress served.",
+    "status": 201
+   },
+   "d-00027": {
+    "@timestamp": "2026-05-28T03:09:51.000Z",
+    "bytes": 3831372,
+    "host": "web-03.example.internal",
+    "message": "event 027: request payload gateway gateway cache codec payload elastic codec tier field codec checksum client elastic field codec shard.",
+    "status": 404,
+    "tag": "t27"
+   },
+   "d-00028": {
+    "@timestamp": "2026-05-01T04:16:04.000Z",
+    "bytes": 3903067,
+    "host": "web-04.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 0,
+     "zone": "z1"
+    },
+    "message": "event 028: stored segment payload served miss merge request refresh lucene snapshot refresh lucene payload checksum replica replica tier merge merge shard stored.",
+    "note": "plain",
+    "status": 500,
+    "tag": "🚀 over-the-limit-tag-0028"
+   },
+   "d-00029": {
+    "@timestamp": "2026-05-02T05:23:17.000Z",
+    "bytes": 2915968,
+    "host": "web-05.example.internal",
+    "message": "event 029: shard upstream snapshot checksum frozen elastic elastic snapshot checksum snapshot latency merge repository refresh.",
+    "status": 503
+   },
+   "d-00030": {
+    "@timestamp": "2026-05-03T06:30:30.000Z",
+    "bytes": 4781244,
+    "host": "web-01.example.internal",
+    "message": "event 030: elastic flush field field miss lucene refresh refresh decompress decompress lucene block backend served served latency shard checksum payload elastic miss handshake cache segment.",
+    "status": 200,
+    "tag": "t30",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00031": {
+    "@timestamp": "2026-05-04T07:37:43.000Z",
+    "bytes": 509146,
+    "host": "web-02.example.internal",
+    "message": "event 031: client replica repository backend replica client merge upstream.",
+    "status": 201,
+    "tag": "🚀 over-the-limit-tag-0031"
+   },
+   "d-00032": {
+    "@timestamp": "2026-05-05T08:44:56.000Z",
+    "bytes": 1913106,
+    "host": "web-03.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 4,
+     "zone": "z2"
+    },
+    "message": "event 032: latency payload tier latency pool refresh stored shard gateway cache retry backend snapshot stored cache codec compress latency.",
+    "status": 404
+   },
+   "d-00034": {
+    "@timestamp": "2026-05-07T10:58:22.000Z",
+    "bytes": 4784919,
+    "host": "web-05.example.internal",
+    "message": "event 034: segment latency tier served latency payload upstream merge replica latency backend gateway pool codec stored pool lucene pool flush gateway served gateway latency replica.",
+    "status": 503,
+    "tag": "🚀 over-the-limit-tag-0034"
+   },
+   "d-00035": {
+    "@timestamp": "2026-05-08T11:05:35.000Z",
+    "bytes": 541502,
+    "host": "web-01.example.internal",
+    "message": "event 035: timeout block snapshot cache frozen elastic compress replica.",
+    "note": "café crème",
+    "status": 200,
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00036": {
+    "@timestamp": "2026-05-09T12:12:48.000Z",
+    "bytes": 1011336,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "updated",
+     "rack": 1,
+     "zone": "z0"
+    },
+    "message": "event 036: cache elastic merge upstream cache backend stored snapshot latency gateway codec compress upstream codec merge shard elastic decompress.",
+    "status": 404,
+    "tag": "t36"
+   },
+   "d-00037": {
+    "@timestamp": "2026-05-10T13:19:01.000Z",
+    "bytes": 1801383,
+    "host": "web-03.example.internal",
+    "message": "event 037: payload payload gateway block handshake connection decompress codec served merge handshake elastic repository elastic retry timeout segment decompress codec payload latency backend handshake.",
+    "status": 404,
+    "tag": "🚀 over-the-limit-tag-0037"
+   },
+   "d-00038": {
+    "@timestamp": "2026-05-11T14:26:14.000Z",
+    "bytes": 1300132,
+    "host": "web-04.example.internal",
+    "message": "event 038: handshake flush backend request payload backend upstream latency upstream client decompress decompress merge pool retry snapshot flush.",
+    "status": 500
+   },
+   "d-00039": {
+    "@timestamp": "2026-05-12T15:33:27.000Z",
+    "bytes": 4321846,
+    "host": "web-05.example.internal",
+    "message": "event 039: pool field replica frozen client payload client pool latency lucene checksum payload miss field retry flush gateway compress upstream timeout decompress.",
+    "status": 503,
+    "tag": "t39"
+   },
+   "d-00040": {
+    "@timestamp": "2026-05-13T16:40:40.000Z",
+    "bytes": 4444263,
+    "host": "web-01.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 5,
+     "zone": "z1"
+    },
+    "message": "event 040: miss shard field compress replica flush pool frozen connection merge served stored frozen tier shard segment frozen connection snapshot cache.",
+    "status": 200,
+    "tag": "🚀 over-the-limit-tag-0040",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00041": {
+    "@timestamp": "2026-05-14T17:47:53.000Z",
+    "bytes": 361400,
+    "host": "web-02.example.internal",
+    "message": "event 041: elastic snapshot block replica repository decompress gateway connection gateway cache lucene shard decompress connection request handshake served timeout payload client.",
+    "status": 201
+   },
+   "d-00042": {
+    "@timestamp": "2026-05-15T18:54:06.000Z",
+    "bytes": 3312513,
+    "host": "web-03.example.internal",
+    "message": "event 042: merge refresh tier compress timeout segment elastic frozen gateway timeout handshake shard codec segment field codec repository cache lucene handshake cache pool handshake.",
+    "note": "😀 grinning",
+    "status": 404,
+    "tag": "t42"
+   },
+   "d-00044": {
+    "@timestamp": "2026-05-17T20:08:32.000Z",
+    "bytes": 2302522,
+    "host": "web-05.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 2,
+     "zone": "z2"
+    },
+    "message": "event 044: repository repository frozen client frozen client timeout backend.",
+    "status": 503
+   },
+   "d-00045": {
+    "@timestamp": "2026-05-18T21:15:45.000Z",
+    "bytes": 4981098,
+    "host": "web-01.example.internal",
+    "message": "event 045: served connection flush pool flush segment payload payload pool served tier snapshot shard connection block decompress gateway.",
+    "status": 200,
+    "tag": "t45",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00046": {
+    "@timestamp": "2026-05-19T22:22:58.000Z",
+    "bytes": 1474952,
+    "host": "web-02.example.internal",
+    "message": "event 046: merge pool shard merge block flush elastic stored refresh timeout latency tier handshake replica connection payload segment pool stored request repository.",
+    "status": 201,
+    "tag": "🚀 over-the-limit-tag-0046"
+   },
+   "d-00047": {
+    "@timestamp": "2026-05-20T23:29:11.000Z",
+    "bytes": 3011798,
+    "host": "web-03.example.internal",
+    "message": "event 047: lucene handshake gateway client miss repository pool frozen.",
+    "status": 404
+   },
+   "d-00048": {
+    "@timestamp": "2026-05-21T00:36:24.000Z",
+    "bytes": 1310590,
+    "host": "web-04.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 6,
+     "zone": "z0"
+    },
+    "message": "event 048: refresh pool repository field shard codec request elastic lucene stored segment payload gateway refresh.",
+    "status": 500,
+    "tag": "t48"
+   },
+   "d-00049": {
+    "@timestamp": "2026-05-22T01:43:37.000Z",
+    "bytes": 3851574,
+    "host": "web-05.example.internal",
+    "message": "event 049: repository tier pool merge pool lucene pool block refresh timeout request served block lucene latency checksum payload lucene connection miss frozen miss merge served.",
+    "note": "日本語",
+    "status": 503,
+    "tag": "🚀 over-the-limit-tag-0049"
+   },
+   "d-00050": {
+    "@timestamp": "2026-05-23T02:50:50.000Z",
+    "bytes": 2017895,
+    "host": "web-01.example.internal",
+    "message": "event 050: decompress cache upstream miss payload compress field tier.",
+    "status": 200,
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00051": {
+    "@timestamp": "2026-05-24T03:57:03.000Z",
+    "bytes": 812632,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "updated"
+    },
+    "message": "event 051: latency tier handshake segment served snapshot replica frozen elastic pool retry codec backend decompress request repository merge.",
+    "status": 404,
+    "tag": "t51"
+   },
+   "d-00052": {
+    "@timestamp": "2026-05-25T04:04:16.000Z",
+    "bytes": 238721,
+    "host": "web-03.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 3,
+     "zone": "z1"
+    },
+    "message": "event 052: flush merge backend miss codec flush served elastic pool connection snapshot client shard client miss pool decompress payload.",
+    "status": 404,
+    "tag": "🚀 over-the-limit-tag-0052"
+   },
+   "d-00054": {
+    "@timestamp": "2026-05-27T06:18:42.000Z",
+    "bytes": 2745207,
+    "host": "web-05.example.internal",
+    "message": "event 054: cache merge compress snapshot pool payload elastic connection elastic payload latency snapshot latency shard latency checksum connection stored.",
+    "status": 503,
+    "tag": "t54"
+   },
+   "d-00055": {
+    "@timestamp": "2026-05-28T07:25:55.000Z",
+    "bytes": 1836316,
+    "host": "web-01.example.internal",
+    "labels": {
+     "zone": "z1"
+    },
+    "message": "event 055: frozen served latency elastic elastic latency backend stored block client codec gateway shard decompress decompress flush segment.",
+    "status": 200,
+    "tag": "🚀 over-the-limit-tag-0055",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00056": {
+    "@timestamp": "2026-05-01T08:32:08.000Z",
+    "bytes": 2745432,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 0,
+     "zone": "z2"
+    },
+    "message": "event 056: backend served checksum cache timeout backend connection codec refresh checksum pool gateway handshake segment latency timeout tier gateway flush payload compress.",
+    "note": "rocket 🚀🚀",
+    "status": 201
+   },
+   "d-00057": {
+    "@timestamp": "2026-05-02T09:39:21.000Z",
+    "bytes": 2804510,
+    "host": "web-03.example.internal",
+    "message": "event 057: payload flush lucene segment stored merge frozen payload flush compress merge client miss cache client latency shard timeout timeout gateway field.",
+    "status": 404,
+    "tag": "t57"
+   },
+   "d-00058": {
+    "@timestamp": "2026-05-03T10:46:34.000Z",
+    "bytes": 3268753,
+    "host": "web-04.example.internal",
+    "message": "event 058: lucene segment cache handshake stored tier gateway stored compress decompress.",
+    "status": 500,
+    "tag": "🚀 over-the-limit-tag-0058"
+   },
+   "d-00059": {
+    "@timestamp": "2026-05-04T11:53:47.000Z",
+    "bytes": 1148739,
+    "host": "web-05.example.internal",
+    "message": "event 059: field refresh flush checksum lucene request refresh segment elastic connection merge latency cache merge served handshake upstream latency.",
+    "status": 503
+   },
+   "d-00060": {
+    "@timestamp": "2026-05-05T12:00:00.000Z",
+    "bytes": 2290579,
+    "host": "web-01.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 4,
+     "zone": "z0"
+    },
+    "message": "event 060: pool backend client repository tier gateway latency field latency.",
+    "status": 200,
+    "tag": "t60",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00061": {
+    "@timestamp": "2026-05-06T13:07:13.000Z",
+    "bytes": 3287303,
+    "host": "web-02.example.internal",
+    "message": "event 061: handshake checksum handshake flush pool backend segment client replica block backend compress compress backend upstream field served block codec shard latency flush served elastic.",
+    "status": 201,
+    "tag": "🚀 over-the-limit-tag-0061"
+   },
+   "d-00062": {
+    "@timestamp": "2026-05-07T14:14:26.000Z",
+    "bytes": 4334061,
+    "host": "web-03.example.internal",
+    "message": "event 062: backend handshake repository snapshot backend segment upstream elastic retry miss connection block elastic field frozen checksum timeout latency cache flush gateway request request connection.",
+    "status": 404
+   },
+   "d-00064": {
+    "@timestamp": "2026-05-09T16:28:52.000Z",
+    "bytes": 2100948,
+    "host": "web-05.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 1,
+     "zone": "z1"
+    },
+    "message": "event 064: lucene flush tier latency elastic refresh decompress block.",
+    "status": 503,
+    "tag": "🚀 over-the-limit-tag-0064"
+   },
+   "d-00065": {
+    "@timestamp": "2026-05-10T17:35:05.000Z",
+    "bytes": 2477684,
+    "host": "web-01.example.internal",
+    "message": "event 065: request checksum gateway payload miss tier handshake payload latency repository timeout backend lucene gateway block connection payload timeout elastic shard timeout handshake served frozen.",
+    "status": 200,
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00066": {
+    "@timestamp": "2026-05-11T18:42:18.000Z",
+    "bytes": 405730,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "updated",
+     "zone": "z0"
+    },
+    "message": "event 066: backend gateway pool pool gateway payload upstream backend served upstream field tier segment frozen payload.",
+    "status": 404,
+    "tag": "t66"
+   },
+   "d-00067": {
+    "@timestamp": "2026-05-12T19:49:31.000Z",
+    "bytes": 1096669,
+    "host": "web-03.example.internal",
+    "message": "event 067: snapshot snapshot pool payload tier tier segment repository stored retry stored repository elastic upstream latency miss decompress segment upstream decompress client codec.",
+    "status": 404,
+    "tag": "🚀 over-the-limit-tag-0067"
+   },
+   "d-00068": {
+    "@timestamp": "2026-05-13T20:56:44.000Z",
+    "bytes": 4225876,
+    "host": "web-04.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 5,
+     "zone": "z2"
+    },
+    "message": "event 068: served shard latency handshake snapshot served lucene decompress decompress block.",
+    "status": 500
+   },
+   "d-00069": {
+    "@timestamp": "2026-05-14T21:03:57.000Z",
+    "bytes": 3700002,
+    "host": "web-05.example.internal",
+    "message": "event 069: miss frozen cache segment retry flush shard cache.",
+    "status": 503,
+    "tag": "t69"
+   },
+   "d-00070": {
+    "@timestamp": "2026-05-15T22:10:10.000Z",
+    "bytes": 3544819,
+    "host": "web-01.example.internal",
+    "message": "event 070: frozen latency replica request elastic field backend handshake snapshot merge flush flush latency cache connection.",
+    "note": "café crème",
+    "status": 200,
+    "tag": "🚀 over-the-limit-tag-0070",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00071": {
+    "@timestamp": "2026-05-16T23:17:23.000Z",
+    "bytes": 4038137,
+    "host": "web-02.example.internal",
+    "message": "event 071: block segment connection handshake frozen segment merge decompress shard decompress miss tier field shard flush tier.",
+    "status": 201
+   },
+   "d-00072": {
+    "@timestamp": "2026-05-17T00:24:36.000Z",
+    "bytes": 253945,
+    "host": "web-03.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 2,
+     "zone": "z0"
+    },
+    "message": "event 072: handshake field backend handshake cache snapshot gateway codec request upstream elastic backend stored tier repository tier flush.",
+    "status": 404,
+    "tag": "t72"
+   },
+   "d-00074": {
+    "@timestamp": "2026-05-19T02:38:02.000Z",
+    "bytes": 4326854,
+    "host": "web-05.example.internal",
+    "message": "event 074: block stored merge lucene checksum handshake retry gateway gateway stored miss connection decompress replica tier snapshot latency upstream.",
+    "status": 503
+   },
+   "d-00075": {
+    "@timestamp": "2026-05-20T03:45:15.000Z",
+    "bytes": 3060475,
+    "host": "web-01.example.internal",
+    "message": "event 075: block gateway tier connection cache flush field elastic.",
+    "status": 200,
+    "tag": "t75",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00076": {
+    "@timestamp": "2026-05-21T04:52:28.000Z",
+    "bytes": 2093468,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 6,
+     "zone": "z1"
+    },
+    "message": "event 076: codec stored retry pool decompress compress snapshot flush lucene field snapshot checksum compress cache client flush stored frozen.",
+    "status": 201,
+    "tag": "🚀 over-the-limit-tag-0076"
+   },
+   "d-00077": {
+    "@timestamp": "2026-05-22T05:59:41.000Z",
+    "bytes": 2176922,
+    "host": "web-03.example.internal",
+    "labels": {
+     "zone": "z2"
+    },
+    "message": "event 077: served lucene field client segment replica cache elastic tier field segment request client elastic flush merge decompress retry flush connection payload gateway timeout codec.",
+    "note": "😀 grinning",
+    "status": 404
+   },
+   "d-00078": {
+    "@timestamp": "2026-05-23T06:06:54.000Z",
+    "bytes": 443335,
+    "host": "web-04.example.internal",
+    "message": "event 078: cache upstream repository flush compress pool decompress codec retry segment timeout latency.",
+    "status": 500,
+    "tag": "t78"
+   },
+   "d-00079": {
+    "@timestamp": "2026-05-24T07:13:07.000Z",
+    "bytes": 1945965,
+    "host": "web-05.example.internal",
+    "message": "event 079: flush checksum shard latency replica timeout lucene frozen connection connection.",
+    "status": 503,
+    "tag": "🚀 over-the-limit-tag-0079"
+   },
+   "d-00080": {
+    "@timestamp": "2026-05-25T08:20:20.000Z",
+    "bytes": 4910669,
+    "host": "web-01.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 3,
+     "zone": "z2"
+    },
+    "message": "event 080: pool request repository replica tier payload flush segment pool latency connection repository.",
+    "status": 200,
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00081": {
+    "@timestamp": "2026-05-26T09:27:33.000Z",
+    "bytes": 2273785,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "updated"
+    },
+    "message": "event 081: latency served miss block lucene frozen block retry snapshot gateway decompress timeout frozen compress stored miss pool upstream handshake lucene checksum connection lucene served.",
+    "status": 404,
+    "tag": "t81"
+   },
+   "d-00082": {
+    "@timestamp": "2026-05-27T10:34:46.000Z",
+    "bytes": 2384705,
+    "host": "web-03.example.internal",
+    "message": "event 082: upstream replica elastic connection checksum lucene merge gateway miss checksum stored upstream cache.",
+    "status": 404,
+    "tag": "🚀 over-the-limit-tag-0082"
+   },
+   "d-00084": {
+    "@timestamp": "2026-05-01T12:48:12.000Z",
+    "bytes": 845354,
+    "host": "web-05.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 0,
+     "zone": "z0"
+    },
+    "message": "event 084: retry frozen merge tier frozen stored replica backend.",
+    "note": "日本語",
+    "status": 503,
+    "tag": "t84"
+   },
+   "d-00085": {
+    "@timestamp": "2026-05-02T13:55:25.000Z",
+    "bytes": 3973779,
+    "host": "web-01.example.internal",
+    "message": "event 085: checksum block checksum refresh stored compress decompress connection upstream served shard cache.",
+    "status": 200,
+    "tag": "🚀 over-the-limit-tag-0085",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00086": {
+    "@timestamp": "2026-05-03T14:02:38.000Z",
+    "bytes": 3335886,
+    "host": "web-02.example.internal",
+    "message": "event 086: retry payload snapshot field client served miss refresh elastic cache pool field retry stored elastic checksum refresh refresh codec latency replica.",
+    "status": 201
+   },
+   "d-00087": {
+    "@timestamp": "2026-05-04T15:09:51.000Z",
+    "bytes": 1432586,
+    "host": "web-03.example.internal",
+    "message": "event 087: snapshot served compress frozen flush client connection backend handshake snapshot compress upstream.",
+    "status": 404,
+    "tag": "t87"
+   },
+   "d-00088": {
+    "@timestamp": "2026-05-05T16:16:04.000Z",
+    "bytes": 981622,
+    "host": "web-04.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 4,
+     "zone": "z1"
+    },
+    "message": "event 088: merge latency shard replica elastic handshake pool decompress pool.",
+    "status": 500,
+    "tag": "🚀 over-the-limit-tag-0088"
+   },
+   "d-00089": {
+    "@timestamp": "2026-05-06T17:23:17.000Z",
+    "bytes": 4829687,
+    "host": "web-05.example.internal",
+    "message": "event 089: cache flush stored latency replica upstream codec refresh connection checksum refresh elastic checksum flush elastic shard block timeout pool segment upstream merge codec.",
+    "status": 503
+   },
+   "d-00090": {
+    "@timestamp": "2026-05-07T18:30:30.000Z",
+    "bytes": 2186003,
+    "host": "web-01.example.internal",
+    "message": "event 090: codec frozen client request refresh stored lucene refresh lucene retry field timeout handshake compress.",
+    "status": 200,
+    "tag": "t90",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00091": {
+    "@timestamp": "2026-05-08T19:37:43.000Z",
+    "bytes": 2481622,
+    "host": "web-02.example.internal",
+    "message": "event 091: segment refresh latency served timeout field client shard merge compress shard codec flush.",
+    "note": "rocket 🚀🚀",
+    "status": 201,
+    "tag": "🚀 over-the-limit-tag-0091"
+   },
+   "d-00092": {
+    "@timestamp": "2026-05-09T20:44:56.000Z",
+    "bytes": 3585736,
+    "host": "web-03.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 1,
+     "zone": "z2"
+    },
+    "message": "event 092: served block timeout replica lucene codec latency merge merge payload decompress decompress elastic decompress repository connection codec payload merge payload frozen upstream.",
+    "status": 404
+   },
+   "d-00094": {
+    "@timestamp": "2026-05-11T22:58:22.000Z",
+    "bytes": 4213410,
+    "host": "web-05.example.internal",
+    "message": "event 094: elastic upstream codec timeout served refresh flush payload checksum refresh replica retry lucene flush tier checksum retry tier flush repository field client.",
+    "status": 503,
+    "tag": "🚀 over-the-limit-tag-0094"
+   },
+   "d-00095": {
+    "@timestamp": "2026-05-12T23:05:35.000Z",
+    "bytes": 4462415,
+    "host": "web-01.example.internal",
+    "message": "event 095: connection served cache block upstream compress gateway flush field.",
+    "status": 200,
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00096": {
+    "@timestamp": "2026-05-13T00:12:48.000Z",
+    "bytes": 3022947,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "updated",
+     "rack": 5,
+     "zone": "z0"
+    },
+    "message": "event 096: replica repository elastic repository payload frozen snapshot timeout upstream latency flush request latency retry decompress.",
+    "status": 404,
+    "tag": "t96"
+   },
+   "d-00097": {
+    "@timestamp": "2026-05-14T01:19:01.000Z",
+    "bytes": 1552970,
+    "host": "web-03.example.internal",
+    "message": "event 097: retry merge upstream upstream stored block tier request miss latency compress timeout.",
+    "status": 404,
+    "tag": "🚀 over-the-limit-tag-0097"
+   },
+   "d-00098": {
+    "@timestamp": "2026-05-15T02:26:14.000Z",
+    "bytes": 3727204,
+    "host": "web-04.example.internal",
+    "message": "event 098: codec backend segment tier block field payload shard codec shard snapshot decompress latency shard refresh payload snapshot flush.",
+    "note": "plain",
+    "status": 500
+   },
+   "d-00099": {
+    "@timestamp": "2026-05-16T03:33:27.000Z",
+    "bytes": 4528069,
+    "host": "web-05.example.internal",
+    "labels": {
+     "zone": "z0"
+    },
+    "message": "event 099: cache flush miss compress upstream payload payload merge miss frozen connection payload cache replica backend codec miss codec shard snapshot checksum lucene merge miss.",
+    "status": 503,
+    "tag": "t99"
+   },
+   "d-00100": {
+    "@timestamp": "2026-05-17T04:40:40.000Z",
+    "bytes": 1037514,
+    "host": "web-01.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 2,
+     "zone": "z1"
+    },
+    "message": "event 100: cache cache checksum latency client retry latency codec snapshot segment replica pool decompress retry segment stored merge gateway.",
+    "status": 200,
+    "tag": "🚀 over-the-limit-tag-0100",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00101": {
+    "@timestamp": "2026-05-18T05:47:53.000Z",
+    "bytes": 347818,
+    "host": "web-02.example.internal",
+    "message": "event 101: backend timeout flush retry segment refresh field tier field checksum retry repository codec pool cache frozen stored lucene elastic.",
+    "status": 201
+   },
+   "d-00102": {
+    "@timestamp": "2026-05-19T06:54:06.000Z",
+    "bytes": 3545272,
+    "host": "web-03.example.internal",
+    "message": "event 102: compress latency latency codec client snapshot stored codec stored repository.",
+    "status": 404,
+    "tag": "t102"
+   },
+   "d-00104": {
+    "@timestamp": "2026-05-21T08:08:32.000Z",
+    "bytes": 2666143,
+    "host": "web-05.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 6,
+     "zone": "z2"
+    },
+    "message": "event 104: stored frozen shard connection compress gateway timeout segment latency frozen lucene retry field latency.",
+    "status": 503
+   },
+   "d-00105": {
+    "@timestamp": "2026-05-22T09:15:45.000Z",
+    "bytes": 2821480,
+    "host": "web-01.example.internal",
+    "message": "event 105: codec request request merge connection request request frozen frozen snapshot elastic snapshot segment retry field gateway flush merge retry.",
+    "note": "café crème",
+    "status": 200,
+    "tag": "t105",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00106": {
+    "@timestamp": "2026-05-23T10:22:58.000Z",
+    "bytes": 1696180,
+    "host": "web-02.example.internal",
+    "message": "event 106: gateway field decompress frozen compress cache codec elastic client segment checksum request upstream retry latency.",
+    "status": 201,
+    "tag": "🚀 over-the-limit-tag-0106"
+   },
+   "d-00107": {
+    "@timestamp": "2026-05-24T11:29:11.000Z",
+    "bytes": 2093037,
+    "host": "web-03.example.internal",
+    "message": "event 107: decompress backend pool lucene segment client replica block timeout block repository gateway frozen compress checksum segment compress pool handshake cache gateway served.",
+    "status": 404
+   },
+   "d-00108": {
+    "@timestamp": "2026-05-25T12:36:24.000Z",
+    "bytes": 4683889,
+    "host": "web-04.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 3,
+     "zone": "z0"
+    },
+    "message": "event 108: codec checksum replica handshake latency checksum repository connection repository checksum upstream latency block field miss tier decompress.",
+    "status": 500,
+    "tag": "t108"
+   },
+   "d-00109": {
+    "@timestamp": "2026-05-26T13:43:37.000Z",
+    "bytes": 3238327,
+    "host": "web-05.example.internal",
+    "message": "event 109: checksum shard connection flush client repository miss frozen miss refresh field latency flush request frozen compress.",
+    "status": 503,
+    "tag": "🚀 over-the-limit-tag-0109"
+   },
+   "d-00110": {
+    "@timestamp": "2026-05-27T14:50:50.000Z",
+    "bytes": 2486509,
+    "host": "web-01.example.internal",
+    "labels": {
+     "zone": "z2"
+    },
+    "message": "event 110: cache replica field payload codec latency backend connection flush stored codec payload request codec cache timeout connection shard lucene backend frozen decompress block.",
+    "status": 200,
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00111": {
+    "@timestamp": "2026-05-28T15:57:03.000Z",
+    "bytes": 2541563,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "updated"
+    },
+    "message": "event 111: cache elastic lucene segment checksum backend checksum payload shard connection latency.",
+    "status": 404,
+    "tag": "t111"
+   },
+   "d-00112": {
+    "@timestamp": "2026-05-01T16:04:16.000Z",
+    "bytes": 60445,
+    "host": "web-03.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 0,
+     "zone": "z1"
+    },
+    "message": "event 112: lucene block merge payload replica connection cache stored payload checksum payload field.",
+    "note": "😀 grinning",
+    "status": 404,
+    "tag": "🚀 over-the-limit-tag-0112"
+   },
+   "d-00114": {
+    "@timestamp": "2026-05-03T18:18:42.000Z",
+    "bytes": 2847932,
+    "host": "web-05.example.internal",
+    "message": "event 114: cache lucene served checksum lucene request tier upstream timeout tier retry frozen field connection frozen.",
+    "status": 503,
+    "tag": "t114"
+   },
+   "d-00115": {
+    "@timestamp": "2026-05-04T19:25:55.000Z",
+    "bytes": 18148,
+    "host": "web-01.example.internal",
+    "message": "event 115: elastic upstream block handshake timeout block snapshot request snapshot elastic payload decompress.",
+    "status": 200,
+    "tag": "🚀 over-the-limit-tag-0115",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00116": {
+    "@timestamp": "2026-05-05T20:32:08.000Z",
+    "bytes": 1438402,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 4,
+     "zone": "z2"
+    },
+    "message": "event 116: snapshot payload timeout gateway repository tier field latency request timeout flush latency repository lucene gateway latency block backend cache pool compress segment flush retry.",
+    "status": 201
+   },
+   "d-00117": {
+    "@timestamp": "2026-05-06T21:39:21.000Z",
+    "bytes": 4633434,
+    "host": "web-03.example.internal",
+    "message": "event 117: miss block connection merge gateway served connection codec elastic gateway repository tier gateway stored flush handshake.",
+    "status": 404,
+    "tag": "t117"
+   },
+   "d-00118": {
+    "@timestamp": "2026-05-07T22:46:34.000Z",
+    "bytes": 1173941,
+    "host": "web-04.example.internal",
+    "message": "event 118: timeout retry merge miss miss gateway flush merge payload connection backend.",
+    "status": 500,
+    "tag": "🚀 over-the-limit-tag-0118"
+   },
+   "d-00119": {
+    "@timestamp": "2026-05-08T23:53:47.000Z",
+    "bytes": 647162,
+    "host": "web-05.example.internal",
+    "message": "event 119: checksum gateway payload field checksum elastic latency snapshot tier connection frozen frozen stored pool request elastic upstream latency replica served.",
+    "note": "日本語",
+    "status": 503
+   }
+  }
+ },
+ "test_deletes_zstd": {
+  "deleted_ids": [
+   "d-00003",
+   "d-00013",
+   "d-00023",
+   "d-00033",
+   "d-00043",
+   "d-00053",
+   "d-00063",
+   "d-00073",
+   "d-00083",
+   "d-00093",
+   "d-00103",
+   "d-00113"
+  ],
+  "updated_ids": [
+   "d-00006",
+   "d-00021",
+   "d-00036",
+   "d-00051",
+   "d-00066",
+   "d-00081",
+   "d-00096",
+   "d-00111"
+  ],
+  "sources": {
+   "d-00000": {
+    "@timestamp": "2026-05-01T00:00:00.000Z",
+    "bytes": 2108732,
+    "host": "web-01.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 0,
+     "zone": "z0"
+    },
+    "message": "event 000: field elastic refresh tier stored decompress field connection shard field.",
+    "note": "café crème",
+    "status": 200,
+    "tag": "t0",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00001": {
+    "@timestamp": "2026-05-02T01:07:13.000Z",
+    "bytes": 4995903,
+    "host": "web-02.example.internal",
+    "message": "event 001: stored elastic backend retry gateway timeout refresh refresh.",
+    "status": 201,
+    "tag": "🚀 over-the-limit-tag-0001"
+   },
+   "d-00002": {
+    "@timestamp": "2026-05-03T02:14:26.000Z",
+    "bytes": 923468,
+    "host": "web-03.example.internal",
+    "message": "event 002: block miss elastic timeout snapshot repository replica payload lucene shard flush repository replica handshake served handshake tier stored served gateway upstream codec segment connection.",
+    "status": 404
+   },
+   "d-00004": {
+    "@timestamp": "2026-05-05T04:28:52.000Z",
+    "bytes": 109078,
+    "host": "web-05.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 4,
+     "zone": "z1"
+    },
+    "message": "event 004: replica checksum refresh latency request frozen miss gateway client latency field stored shard timeout gateway payload repository checksum segment refresh handshake block shard retry.",
+    "status": 503,
+    "tag": "🚀 over-the-limit-tag-0004"
+   },
+   "d-00005": {
+    "@timestamp": "2026-05-06T05:35:05.000Z",
+    "bytes": 1380431,
+    "host": "web-01.example.internal",
+    "message": "event 005: segment compress field pool elastic refresh field snapshot miss cache repository.",
+    "status": 200,
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00006": {
+    "@timestamp": "2026-05-07T06:42:18.000Z",
+    "bytes": 3713851,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "updated"
+    },
+    "message": "event 006: decompress upstream shard field tier merge client shard frozen frozen pool tier latency request pool miss served stored refresh timeout upstream.",
+    "status": 404,
+    "tag": "t6"
+   },
+   "d-00007": {
+    "@timestamp": "2026-05-08T07:49:31.000Z",
+    "bytes": 4733167,
+    "host": "web-03.example.internal",
+    "message": "event 007: miss upstream merge lucene timeout cache connection replica handshake codec cache field gateway segment repository block retry snapshot compress tier.",
+    "note": "😀 grinning",
+    "status": 404,
+    "tag": "🚀 over-the-limit-tag-0007"
+   },
+   "d-00008": {
+    "@timestamp": "2026-05-09T08:56:44.000Z",
+    "bytes": 1423097,
+    "host": "web-04.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 1,
+     "zone": "z2"
+    },
+    "message": "event 008: snapshot snapshot segment checksum compress replica field upstream handshake merge.",
+    "status": 500
+   },
+   "d-00009": {
+    "@timestamp": "2026-05-10T09:03:57.000Z",
+    "bytes": 4256505,
+    "host": "web-05.example.internal",
+    "message": "event 009: gateway upstream timeout stored checksum compress timeout miss request cache gateway elastic decompress decompress checksum upstream stored upstream.",
+    "status": 503,
+    "tag": "t9"
+   },
+   "d-00010": {
+    "@timestamp": "2026-05-11T10:10:10.000Z",
+    "bytes": 2696394,
+    "host": "web-01.example.internal",
+    "message": "event 010: codec decompress compress compress shard checksum merge gateway.",
+    "status": 200,
+    "tag": "🚀 over-the-limit-tag-0010",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00011": {
+    "@timestamp": "2026-05-12T11:17:23.000Z",
+    "bytes": 1887245,
+    "host": "web-02.example.internal",
+    "labels": {
+     "zone": "z2"
+    },
+    "message": "event 011: latency pool frozen retry connection timeout served elastic cache connection served payload elastic.",
+    "status": 201
+   },
+   "d-00012": {
+    "@timestamp": "2026-05-13T12:24:36.000Z",
+    "bytes": 2555361,
+    "host": "web-03.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 5,
+     "zone": "z0"
+    },
+    "message": "event 012: payload served repository backend stored replica elastic repository tier checksum tier snapshot lucene.",
+    "status": 404,
+    "tag": "t12"
+   },
+   "d-00014": {
+    "@timestamp": "2026-05-15T14:38:02.000Z",
+    "bytes": 4380135,
+    "host": "web-05.example.internal",
+    "message": "event 014: compress tier backend cache miss refresh gateway latency latency shard compress.",
+    "note": "日本語",
+    "status": 503
+   },
+   "d-00015": {
+    "@timestamp": "2026-05-16T15:45:15.000Z",
+    "bytes": 4952933,
+    "host": "web-01.example.internal",
+    "message": "event 015: refresh pool checksum request served retry client block refresh gateway timeout refresh backend field flush timeout.",
+    "status": 200,
+    "tag": "t15",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00016": {
+    "@timestamp": "2026-05-17T16:52:28.000Z",
+    "bytes": 1768319,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 2,
+     "zone": "z1"
+    },
+    "message": "event 016: block block lucene gateway stored checksum timeout compress lucene latency.",
+    "status": 201,
+    "tag": "🚀 over-the-limit-tag-0016"
+   },
+   "d-00017": {},
+   "d-00018": {
+    "@timestamp": "2026-05-19T18:06:54.000Z",
+    "bytes": 3240310,
+    "host": "web-04.example.internal",
+    "message": "event 018: upstream served segment elastic served client field flush upstream handshake upstream client payload snapshot lucene tier replica client lucene checksum request.",
+    "status": 500,
+    "tag": "t18"
+   },
+   "d-00019": {
+    "@timestamp": "2026-05-20T19:13:07.000Z",
+    "bytes": 728744,
+    "host": "web-05.example.internal",
+    "message": "event 019: frozen elastic request flush replica backend checksum tier cache timeout.",
+    "status": 503,
+    "tag": "🚀 over-the-limit-tag-0019"
+   },
+   "d-00020": {
+    "@timestamp": "2026-05-21T20:20:20.000Z",
+    "bytes": 1544860,
+    "host": "web-01.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 6,
+     "zone": "z2"
+    },
+    "message": "event 020: timeout frozen latency block pool cache elastic elastic flush client.",
+    "status": 200,
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00021": {
+    "@timestamp": "2026-05-22T21:27:33.000Z",
+    "bytes": 481792,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "updated"
+    },
+    "message": "event 021: block codec repository merge client retry connection codec timeout latency retry request miss elastic payload served.",
+    "note": "rocket 🚀🚀",
+    "status": 404,
+    "tag": "t21"
+   },
+   "d-00022": {
+    "@timestamp": "2026-05-23T22:34:46.000Z",
+    "bytes": 4299194,
+    "host": "web-03.example.internal",
+    "labels": {
+     "zone": "z1"
+    },
+    "message": "event 022: gateway repository block gateway upstream shard latency client segment frozen handshake segment served connection request payload repository miss cache.",
+    "status": 404,
+    "tag": "🚀 over-the-limit-tag-0022"
+   },
+   "d-00024": {
+    "@timestamp": "2026-05-25T00:48:12.000Z",
+    "bytes": 1748986,
+    "host": "web-05.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 3,
+     "zone": "z0"
+    },
+    "message": "event 024: repository stored snapshot replica block gateway lucene retry field block.",
+    "status": 503,
+    "tag": "t24"
+   },
+   "d-00025": {
+    "@timestamp": "2026-05-26T01:55:25.000Z",
+    "bytes": 690276,
+    "host": "web-01.example.internal",
+    "message": "event 025: codec compress retry stored block checksum stored backend replica upstream.",
+    "status": 200,
+    "tag": "🚀 over-the-limit-tag-0025",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00026": {
+    "@timestamp": "2026-05-27T02:02:38.000Z",
+    "bytes": 1328995,
+    "host": "web-02.example.internal",
+    "message": "event 026: request frozen frozen miss cache refresh served pool compress served.",
+    "status": 201
+   },
+   "d-00027": {
+    "@timestamp": "2026-05-28T03:09:51.000Z",
+    "bytes": 3831372,
+    "host": "web-03.example.internal",
+    "message": "event 027: request payload gateway gateway cache codec payload elastic codec tier field codec checksum client elastic field codec shard.",
+    "status": 404,
+    "tag": "t27"
+   },
+   "d-00028": {
+    "@timestamp": "2026-05-01T04:16:04.000Z",
+    "bytes": 3903067,
+    "host": "web-04.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 0,
+     "zone": "z1"
+    },
+    "message": "event 028: stored segment payload served miss merge request refresh lucene snapshot refresh lucene payload checksum replica replica tier merge merge shard stored.",
+    "note": "plain",
+    "status": 500,
+    "tag": "🚀 over-the-limit-tag-0028"
+   },
+   "d-00029": {
+    "@timestamp": "2026-05-02T05:23:17.000Z",
+    "bytes": 2915968,
+    "host": "web-05.example.internal",
+    "message": "event 029: shard upstream snapshot checksum frozen elastic elastic snapshot checksum snapshot latency merge repository refresh.",
+    "status": 503
+   },
+   "d-00030": {
+    "@timestamp": "2026-05-03T06:30:30.000Z",
+    "bytes": 4781244,
+    "host": "web-01.example.internal",
+    "message": "event 030: elastic flush field field miss lucene refresh refresh decompress decompress lucene block backend served served latency shard checksum payload elastic miss handshake cache segment.",
+    "status": 200,
+    "tag": "t30",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00031": {
+    "@timestamp": "2026-05-04T07:37:43.000Z",
+    "bytes": 509146,
+    "host": "web-02.example.internal",
+    "message": "event 031: client replica repository backend replica client merge upstream.",
+    "status": 201,
+    "tag": "🚀 over-the-limit-tag-0031"
+   },
+   "d-00032": {
+    "@timestamp": "2026-05-05T08:44:56.000Z",
+    "bytes": 1913106,
+    "host": "web-03.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 4,
+     "zone": "z2"
+    },
+    "message": "event 032: latency payload tier latency pool refresh stored shard gateway cache retry backend snapshot stored cache codec compress latency.",
+    "status": 404
+   },
+   "d-00034": {
+    "@timestamp": "2026-05-07T10:58:22.000Z",
+    "bytes": 4784919,
+    "host": "web-05.example.internal",
+    "message": "event 034: segment latency tier served latency payload upstream merge replica latency backend gateway pool codec stored pool lucene pool flush gateway served gateway latency replica.",
+    "status": 503,
+    "tag": "🚀 over-the-limit-tag-0034"
+   },
+   "d-00035": {
+    "@timestamp": "2026-05-08T11:05:35.000Z",
+    "bytes": 541502,
+    "host": "web-01.example.internal",
+    "message": "event 035: timeout block snapshot cache frozen elastic compress replica.",
+    "note": "café crème",
+    "status": 200,
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00036": {
+    "@timestamp": "2026-05-09T12:12:48.000Z",
+    "bytes": 1011336,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "updated",
+     "rack": 1,
+     "zone": "z0"
+    },
+    "message": "event 036: cache elastic merge upstream cache backend stored snapshot latency gateway codec compress upstream codec merge shard elastic decompress.",
+    "status": 404,
+    "tag": "t36"
+   },
+   "d-00037": {
+    "@timestamp": "2026-05-10T13:19:01.000Z",
+    "bytes": 1801383,
+    "host": "web-03.example.internal",
+    "message": "event 037: payload payload gateway block handshake connection decompress codec served merge handshake elastic repository elastic retry timeout segment decompress codec payload latency backend handshake.",
+    "status": 404,
+    "tag": "🚀 over-the-limit-tag-0037"
+   },
+   "d-00038": {
+    "@timestamp": "2026-05-11T14:26:14.000Z",
+    "bytes": 1300132,
+    "host": "web-04.example.internal",
+    "message": "event 038: handshake flush backend request payload backend upstream latency upstream client decompress decompress merge pool retry snapshot flush.",
+    "status": 500
+   },
+   "d-00039": {
+    "@timestamp": "2026-05-12T15:33:27.000Z",
+    "bytes": 4321846,
+    "host": "web-05.example.internal",
+    "message": "event 039: pool field replica frozen client payload client pool latency lucene checksum payload miss field retry flush gateway compress upstream timeout decompress.",
+    "status": 503,
+    "tag": "t39"
+   },
+   "d-00040": {
+    "@timestamp": "2026-05-13T16:40:40.000Z",
+    "bytes": 4444263,
+    "host": "web-01.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 5,
+     "zone": "z1"
+    },
+    "message": "event 040: miss shard field compress replica flush pool frozen connection merge served stored frozen tier shard segment frozen connection snapshot cache.",
+    "status": 200,
+    "tag": "🚀 over-the-limit-tag-0040",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00041": {
+    "@timestamp": "2026-05-14T17:47:53.000Z",
+    "bytes": 361400,
+    "host": "web-02.example.internal",
+    "message": "event 041: elastic snapshot block replica repository decompress gateway connection gateway cache lucene shard decompress connection request handshake served timeout payload client.",
+    "status": 201
+   },
+   "d-00042": {
+    "@timestamp": "2026-05-15T18:54:06.000Z",
+    "bytes": 3312513,
+    "host": "web-03.example.internal",
+    "message": "event 042: merge refresh tier compress timeout segment elastic frozen gateway timeout handshake shard codec segment field codec repository cache lucene handshake cache pool handshake.",
+    "note": "😀 grinning",
+    "status": 404,
+    "tag": "t42"
+   },
+   "d-00044": {
+    "@timestamp": "2026-05-17T20:08:32.000Z",
+    "bytes": 2302522,
+    "host": "web-05.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 2,
+     "zone": "z2"
+    },
+    "message": "event 044: repository repository frozen client frozen client timeout backend.",
+    "status": 503
+   },
+   "d-00045": {
+    "@timestamp": "2026-05-18T21:15:45.000Z",
+    "bytes": 4981098,
+    "host": "web-01.example.internal",
+    "message": "event 045: served connection flush pool flush segment payload payload pool served tier snapshot shard connection block decompress gateway.",
+    "status": 200,
+    "tag": "t45",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00046": {
+    "@timestamp": "2026-05-19T22:22:58.000Z",
+    "bytes": 1474952,
+    "host": "web-02.example.internal",
+    "message": "event 046: merge pool shard merge block flush elastic stored refresh timeout latency tier handshake replica connection payload segment pool stored request repository.",
+    "status": 201,
+    "tag": "🚀 over-the-limit-tag-0046"
+   },
+   "d-00047": {
+    "@timestamp": "2026-05-20T23:29:11.000Z",
+    "bytes": 3011798,
+    "host": "web-03.example.internal",
+    "message": "event 047: lucene handshake gateway client miss repository pool frozen.",
+    "status": 404
+   },
+   "d-00048": {
+    "@timestamp": "2026-05-21T00:36:24.000Z",
+    "bytes": 1310590,
+    "host": "web-04.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 6,
+     "zone": "z0"
+    },
+    "message": "event 048: refresh pool repository field shard codec request elastic lucene stored segment payload gateway refresh.",
+    "status": 500,
+    "tag": "t48"
+   },
+   "d-00049": {
+    "@timestamp": "2026-05-22T01:43:37.000Z",
+    "bytes": 3851574,
+    "host": "web-05.example.internal",
+    "message": "event 049: repository tier pool merge pool lucene pool block refresh timeout request served block lucene latency checksum payload lucene connection miss frozen miss merge served.",
+    "note": "日本語",
+    "status": 503,
+    "tag": "🚀 over-the-limit-tag-0049"
+   },
+   "d-00050": {
+    "@timestamp": "2026-05-23T02:50:50.000Z",
+    "bytes": 2017895,
+    "host": "web-01.example.internal",
+    "message": "event 050: decompress cache upstream miss payload compress field tier.",
+    "status": 200,
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00051": {
+    "@timestamp": "2026-05-24T03:57:03.000Z",
+    "bytes": 812632,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "updated"
+    },
+    "message": "event 051: latency tier handshake segment served snapshot replica frozen elastic pool retry codec backend decompress request repository merge.",
+    "status": 404,
+    "tag": "t51"
+   },
+   "d-00052": {
+    "@timestamp": "2026-05-25T04:04:16.000Z",
+    "bytes": 238721,
+    "host": "web-03.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 3,
+     "zone": "z1"
+    },
+    "message": "event 052: flush merge backend miss codec flush served elastic pool connection snapshot client shard client miss pool decompress payload.",
+    "status": 404,
+    "tag": "🚀 over-the-limit-tag-0052"
+   },
+   "d-00054": {
+    "@timestamp": "2026-05-27T06:18:42.000Z",
+    "bytes": 2745207,
+    "host": "web-05.example.internal",
+    "message": "event 054: cache merge compress snapshot pool payload elastic connection elastic payload latency snapshot latency shard latency checksum connection stored.",
+    "status": 503,
+    "tag": "t54"
+   },
+   "d-00055": {
+    "@timestamp": "2026-05-28T07:25:55.000Z",
+    "bytes": 1836316,
+    "host": "web-01.example.internal",
+    "labels": {
+     "zone": "z1"
+    },
+    "message": "event 055: frozen served latency elastic elastic latency backend stored block client codec gateway shard decompress decompress flush segment.",
+    "status": 200,
+    "tag": "🚀 over-the-limit-tag-0055",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00056": {
+    "@timestamp": "2026-05-01T08:32:08.000Z",
+    "bytes": 2745432,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 0,
+     "zone": "z2"
+    },
+    "message": "event 056: backend served checksum cache timeout backend connection codec refresh checksum pool gateway handshake segment latency timeout tier gateway flush payload compress.",
+    "note": "rocket 🚀🚀",
+    "status": 201
+   },
+   "d-00057": {
+    "@timestamp": "2026-05-02T09:39:21.000Z",
+    "bytes": 2804510,
+    "host": "web-03.example.internal",
+    "message": "event 057: payload flush lucene segment stored merge frozen payload flush compress merge client miss cache client latency shard timeout timeout gateway field.",
+    "status": 404,
+    "tag": "t57"
+   },
+   "d-00058": {
+    "@timestamp": "2026-05-03T10:46:34.000Z",
+    "bytes": 3268753,
+    "host": "web-04.example.internal",
+    "message": "event 058: lucene segment cache handshake stored tier gateway stored compress decompress.",
+    "status": 500,
+    "tag": "🚀 over-the-limit-tag-0058"
+   },
+   "d-00059": {
+    "@timestamp": "2026-05-04T11:53:47.000Z",
+    "bytes": 1148739,
+    "host": "web-05.example.internal",
+    "message": "event 059: field refresh flush checksum lucene request refresh segment elastic connection merge latency cache merge served handshake upstream latency.",
+    "status": 503
+   },
+   "d-00060": {
+    "@timestamp": "2026-05-05T12:00:00.000Z",
+    "bytes": 2290579,
+    "host": "web-01.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 4,
+     "zone": "z0"
+    },
+    "message": "event 060: pool backend client repository tier gateway latency field latency.",
+    "status": 200,
+    "tag": "t60",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00061": {
+    "@timestamp": "2026-05-06T13:07:13.000Z",
+    "bytes": 3287303,
+    "host": "web-02.example.internal",
+    "message": "event 061: handshake checksum handshake flush pool backend segment client replica block backend compress compress backend upstream field served block codec shard latency flush served elastic.",
+    "status": 201,
+    "tag": "🚀 over-the-limit-tag-0061"
+   },
+   "d-00062": {
+    "@timestamp": "2026-05-07T14:14:26.000Z",
+    "bytes": 4334061,
+    "host": "web-03.example.internal",
+    "message": "event 062: backend handshake repository snapshot backend segment upstream elastic retry miss connection block elastic field frozen checksum timeout latency cache flush gateway request request connection.",
+    "status": 404
+   },
+   "d-00064": {
+    "@timestamp": "2026-05-09T16:28:52.000Z",
+    "bytes": 2100948,
+    "host": "web-05.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 1,
+     "zone": "z1"
+    },
+    "message": "event 064: lucene flush tier latency elastic refresh decompress block.",
+    "status": 503,
+    "tag": "🚀 over-the-limit-tag-0064"
+   },
+   "d-00065": {
+    "@timestamp": "2026-05-10T17:35:05.000Z",
+    "bytes": 2477684,
+    "host": "web-01.example.internal",
+    "message": "event 065: request checksum gateway payload miss tier handshake payload latency repository timeout backend lucene gateway block connection payload timeout elastic shard timeout handshake served frozen.",
+    "status": 200,
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00066": {
+    "@timestamp": "2026-05-11T18:42:18.000Z",
+    "bytes": 405730,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "updated",
+     "zone": "z0"
+    },
+    "message": "event 066: backend gateway pool pool gateway payload upstream backend served upstream field tier segment frozen payload.",
+    "status": 404,
+    "tag": "t66"
+   },
+   "d-00067": {
+    "@timestamp": "2026-05-12T19:49:31.000Z",
+    "bytes": 1096669,
+    "host": "web-03.example.internal",
+    "message": "event 067: snapshot snapshot pool payload tier tier segment repository stored retry stored repository elastic upstream latency miss decompress segment upstream decompress client codec.",
+    "status": 404,
+    "tag": "🚀 over-the-limit-tag-0067"
+   },
+   "d-00068": {
+    "@timestamp": "2026-05-13T20:56:44.000Z",
+    "bytes": 4225876,
+    "host": "web-04.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 5,
+     "zone": "z2"
+    },
+    "message": "event 068: served shard latency handshake snapshot served lucene decompress decompress block.",
+    "status": 500
+   },
+   "d-00069": {
+    "@timestamp": "2026-05-14T21:03:57.000Z",
+    "bytes": 3700002,
+    "host": "web-05.example.internal",
+    "message": "event 069: miss frozen cache segment retry flush shard cache.",
+    "status": 503,
+    "tag": "t69"
+   },
+   "d-00070": {
+    "@timestamp": "2026-05-15T22:10:10.000Z",
+    "bytes": 3544819,
+    "host": "web-01.example.internal",
+    "message": "event 070: frozen latency replica request elastic field backend handshake snapshot merge flush flush latency cache connection.",
+    "note": "café crème",
+    "status": 200,
+    "tag": "🚀 over-the-limit-tag-0070",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00071": {
+    "@timestamp": "2026-05-16T23:17:23.000Z",
+    "bytes": 4038137,
+    "host": "web-02.example.internal",
+    "message": "event 071: block segment connection handshake frozen segment merge decompress shard decompress miss tier field shard flush tier.",
+    "status": 201
+   },
+   "d-00072": {
+    "@timestamp": "2026-05-17T00:24:36.000Z",
+    "bytes": 253945,
+    "host": "web-03.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 2,
+     "zone": "z0"
+    },
+    "message": "event 072: handshake field backend handshake cache snapshot gateway codec request upstream elastic backend stored tier repository tier flush.",
+    "status": 404,
+    "tag": "t72"
+   },
+   "d-00074": {
+    "@timestamp": "2026-05-19T02:38:02.000Z",
+    "bytes": 4326854,
+    "host": "web-05.example.internal",
+    "message": "event 074: block stored merge lucene checksum handshake retry gateway gateway stored miss connection decompress replica tier snapshot latency upstream.",
+    "status": 503
+   },
+   "d-00075": {
+    "@timestamp": "2026-05-20T03:45:15.000Z",
+    "bytes": 3060475,
+    "host": "web-01.example.internal",
+    "message": "event 075: block gateway tier connection cache flush field elastic.",
+    "status": 200,
+    "tag": "t75",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00076": {
+    "@timestamp": "2026-05-21T04:52:28.000Z",
+    "bytes": 2093468,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 6,
+     "zone": "z1"
+    },
+    "message": "event 076: codec stored retry pool decompress compress snapshot flush lucene field snapshot checksum compress cache client flush stored frozen.",
+    "status": 201,
+    "tag": "🚀 over-the-limit-tag-0076"
+   },
+   "d-00077": {
+    "@timestamp": "2026-05-22T05:59:41.000Z",
+    "bytes": 2176922,
+    "host": "web-03.example.internal",
+    "labels": {
+     "zone": "z2"
+    },
+    "message": "event 077: served lucene field client segment replica cache elastic tier field segment request client elastic flush merge decompress retry flush connection payload gateway timeout codec.",
+    "note": "😀 grinning",
+    "status": 404
+   },
+   "d-00078": {
+    "@timestamp": "2026-05-23T06:06:54.000Z",
+    "bytes": 443335,
+    "host": "web-04.example.internal",
+    "message": "event 078: cache upstream repository flush compress pool decompress codec retry segment timeout latency.",
+    "status": 500,
+    "tag": "t78"
+   },
+   "d-00079": {
+    "@timestamp": "2026-05-24T07:13:07.000Z",
+    "bytes": 1945965,
+    "host": "web-05.example.internal",
+    "message": "event 079: flush checksum shard latency replica timeout lucene frozen connection connection.",
+    "status": 503,
+    "tag": "🚀 over-the-limit-tag-0079"
+   },
+   "d-00080": {
+    "@timestamp": "2026-05-25T08:20:20.000Z",
+    "bytes": 4910669,
+    "host": "web-01.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 3,
+     "zone": "z2"
+    },
+    "message": "event 080: pool request repository replica tier payload flush segment pool latency connection repository.",
+    "status": 200,
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00081": {
+    "@timestamp": "2026-05-26T09:27:33.000Z",
+    "bytes": 2273785,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "updated"
+    },
+    "message": "event 081: latency served miss block lucene frozen block retry snapshot gateway decompress timeout frozen compress stored miss pool upstream handshake lucene checksum connection lucene served.",
+    "status": 404,
+    "tag": "t81"
+   },
+   "d-00082": {
+    "@timestamp": "2026-05-27T10:34:46.000Z",
+    "bytes": 2384705,
+    "host": "web-03.example.internal",
+    "message": "event 082: upstream replica elastic connection checksum lucene merge gateway miss checksum stored upstream cache.",
+    "status": 404,
+    "tag": "🚀 over-the-limit-tag-0082"
+   },
+   "d-00084": {
+    "@timestamp": "2026-05-01T12:48:12.000Z",
+    "bytes": 845354,
+    "host": "web-05.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 0,
+     "zone": "z0"
+    },
+    "message": "event 084: retry frozen merge tier frozen stored replica backend.",
+    "note": "日本語",
+    "status": 503,
+    "tag": "t84"
+   },
+   "d-00085": {
+    "@timestamp": "2026-05-02T13:55:25.000Z",
+    "bytes": 3973779,
+    "host": "web-01.example.internal",
+    "message": "event 085: checksum block checksum refresh stored compress decompress connection upstream served shard cache.",
+    "status": 200,
+    "tag": "🚀 over-the-limit-tag-0085",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00086": {
+    "@timestamp": "2026-05-03T14:02:38.000Z",
+    "bytes": 3335886,
+    "host": "web-02.example.internal",
+    "message": "event 086: retry payload snapshot field client served miss refresh elastic cache pool field retry stored elastic checksum refresh refresh codec latency replica.",
+    "status": 201
+   },
+   "d-00087": {
+    "@timestamp": "2026-05-04T15:09:51.000Z",
+    "bytes": 1432586,
+    "host": "web-03.example.internal",
+    "message": "event 087: snapshot served compress frozen flush client connection backend handshake snapshot compress upstream.",
+    "status": 404,
+    "tag": "t87"
+   },
+   "d-00088": {
+    "@timestamp": "2026-05-05T16:16:04.000Z",
+    "bytes": 981622,
+    "host": "web-04.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 4,
+     "zone": "z1"
+    },
+    "message": "event 088: merge latency shard replica elastic handshake pool decompress pool.",
+    "status": 500,
+    "tag": "🚀 over-the-limit-tag-0088"
+   },
+   "d-00089": {
+    "@timestamp": "2026-05-06T17:23:17.000Z",
+    "bytes": 4829687,
+    "host": "web-05.example.internal",
+    "message": "event 089: cache flush stored latency replica upstream codec refresh connection checksum refresh elastic checksum flush elastic shard block timeout pool segment upstream merge codec.",
+    "status": 503
+   },
+   "d-00090": {
+    "@timestamp": "2026-05-07T18:30:30.000Z",
+    "bytes": 2186003,
+    "host": "web-01.example.internal",
+    "message": "event 090: codec frozen client request refresh stored lucene refresh lucene retry field timeout handshake compress.",
+    "status": 200,
+    "tag": "t90",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00091": {
+    "@timestamp": "2026-05-08T19:37:43.000Z",
+    "bytes": 2481622,
+    "host": "web-02.example.internal",
+    "message": "event 091: segment refresh latency served timeout field client shard merge compress shard codec flush.",
+    "note": "rocket 🚀🚀",
+    "status": 201,
+    "tag": "🚀 over-the-limit-tag-0091"
+   },
+   "d-00092": {
+    "@timestamp": "2026-05-09T20:44:56.000Z",
+    "bytes": 3585736,
+    "host": "web-03.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 1,
+     "zone": "z2"
+    },
+    "message": "event 092: served block timeout replica lucene codec latency merge merge payload decompress decompress elastic decompress repository connection codec payload merge payload frozen upstream.",
+    "status": 404
+   },
+   "d-00094": {
+    "@timestamp": "2026-05-11T22:58:22.000Z",
+    "bytes": 4213410,
+    "host": "web-05.example.internal",
+    "message": "event 094: elastic upstream codec timeout served refresh flush payload checksum refresh replica retry lucene flush tier checksum retry tier flush repository field client.",
+    "status": 503,
+    "tag": "🚀 over-the-limit-tag-0094"
+   },
+   "d-00095": {
+    "@timestamp": "2026-05-12T23:05:35.000Z",
+    "bytes": 4462415,
+    "host": "web-01.example.internal",
+    "message": "event 095: connection served cache block upstream compress gateway flush field.",
+    "status": 200,
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00096": {
+    "@timestamp": "2026-05-13T00:12:48.000Z",
+    "bytes": 3022947,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "updated",
+     "rack": 5,
+     "zone": "z0"
+    },
+    "message": "event 096: replica repository elastic repository payload frozen snapshot timeout upstream latency flush request latency retry decompress.",
+    "status": 404,
+    "tag": "t96"
+   },
+   "d-00097": {
+    "@timestamp": "2026-05-14T01:19:01.000Z",
+    "bytes": 1552970,
+    "host": "web-03.example.internal",
+    "message": "event 097: retry merge upstream upstream stored block tier request miss latency compress timeout.",
+    "status": 404,
+    "tag": "🚀 over-the-limit-tag-0097"
+   },
+   "d-00098": {
+    "@timestamp": "2026-05-15T02:26:14.000Z",
+    "bytes": 3727204,
+    "host": "web-04.example.internal",
+    "message": "event 098: codec backend segment tier block field payload shard codec shard snapshot decompress latency shard refresh payload snapshot flush.",
+    "note": "plain",
+    "status": 500
+   },
+   "d-00099": {
+    "@timestamp": "2026-05-16T03:33:27.000Z",
+    "bytes": 4528069,
+    "host": "web-05.example.internal",
+    "labels": {
+     "zone": "z0"
+    },
+    "message": "event 099: cache flush miss compress upstream payload payload merge miss frozen connection payload cache replica backend codec miss codec shard snapshot checksum lucene merge miss.",
+    "status": 503,
+    "tag": "t99"
+   },
+   "d-00100": {
+    "@timestamp": "2026-05-17T04:40:40.000Z",
+    "bytes": 1037514,
+    "host": "web-01.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 2,
+     "zone": "z1"
+    },
+    "message": "event 100: cache cache checksum latency client retry latency codec snapshot segment replica pool decompress retry segment stored merge gateway.",
+    "status": 200,
+    "tag": "🚀 over-the-limit-tag-0100",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00101": {
+    "@timestamp": "2026-05-18T05:47:53.000Z",
+    "bytes": 347818,
+    "host": "web-02.example.internal",
+    "message": "event 101: backend timeout flush retry segment refresh field tier field checksum retry repository codec pool cache frozen stored lucene elastic.",
+    "status": 201
+   },
+   "d-00102": {
+    "@timestamp": "2026-05-19T06:54:06.000Z",
+    "bytes": 3545272,
+    "host": "web-03.example.internal",
+    "message": "event 102: compress latency latency codec client snapshot stored codec stored repository.",
+    "status": 404,
+    "tag": "t102"
+   },
+   "d-00104": {
+    "@timestamp": "2026-05-21T08:08:32.000Z",
+    "bytes": 2666143,
+    "host": "web-05.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 6,
+     "zone": "z2"
+    },
+    "message": "event 104: stored frozen shard connection compress gateway timeout segment latency frozen lucene retry field latency.",
+    "status": 503
+   },
+   "d-00105": {
+    "@timestamp": "2026-05-22T09:15:45.000Z",
+    "bytes": 2821480,
+    "host": "web-01.example.internal",
+    "message": "event 105: codec request request merge connection request request frozen frozen snapshot elastic snapshot segment retry field gateway flush merge retry.",
+    "note": "café crème",
+    "status": 200,
+    "tag": "t105",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00106": {
+    "@timestamp": "2026-05-23T10:22:58.000Z",
+    "bytes": 1696180,
+    "host": "web-02.example.internal",
+    "message": "event 106: gateway field decompress frozen compress cache codec elastic client segment checksum request upstream retry latency.",
+    "status": 201,
+    "tag": "🚀 over-the-limit-tag-0106"
+   },
+   "d-00107": {
+    "@timestamp": "2026-05-24T11:29:11.000Z",
+    "bytes": 2093037,
+    "host": "web-03.example.internal",
+    "message": "event 107: decompress backend pool lucene segment client replica block timeout block repository gateway frozen compress checksum segment compress pool handshake cache gateway served.",
+    "status": 404
+   },
+   "d-00108": {
+    "@timestamp": "2026-05-25T12:36:24.000Z",
+    "bytes": 4683889,
+    "host": "web-04.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 3,
+     "zone": "z0"
+    },
+    "message": "event 108: codec checksum replica handshake latency checksum repository connection repository checksum upstream latency block field miss tier decompress.",
+    "status": 500,
+    "tag": "t108"
+   },
+   "d-00109": {
+    "@timestamp": "2026-05-26T13:43:37.000Z",
+    "bytes": 3238327,
+    "host": "web-05.example.internal",
+    "message": "event 109: checksum shard connection flush client repository miss frozen miss refresh field latency flush request frozen compress.",
+    "status": 503,
+    "tag": "🚀 over-the-limit-tag-0109"
+   },
+   "d-00110": {
+    "@timestamp": "2026-05-27T14:50:50.000Z",
+    "bytes": 2486509,
+    "host": "web-01.example.internal",
+    "labels": {
+     "zone": "z2"
+    },
+    "message": "event 110: cache replica field payload codec latency backend connection flush stored codec payload request codec cache timeout connection shard lucene backend frozen decompress block.",
+    "status": 200,
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00111": {
+    "@timestamp": "2026-05-28T15:57:03.000Z",
+    "bytes": 2541563,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "updated"
+    },
+    "message": "event 111: cache elastic lucene segment checksum backend checksum payload shard connection latency.",
+    "status": 404,
+    "tag": "t111"
+   },
+   "d-00112": {
+    "@timestamp": "2026-05-01T16:04:16.000Z",
+    "bytes": 60445,
+    "host": "web-03.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 0,
+     "zone": "z1"
+    },
+    "message": "event 112: lucene block merge payload replica connection cache stored payload checksum payload field.",
+    "note": "😀 grinning",
+    "status": 404,
+    "tag": "🚀 over-the-limit-tag-0112"
+   },
+   "d-00114": {
+    "@timestamp": "2026-05-03T18:18:42.000Z",
+    "bytes": 2847932,
+    "host": "web-05.example.internal",
+    "message": "event 114: cache lucene served checksum lucene request tier upstream timeout tier retry frozen field connection frozen.",
+    "status": 503,
+    "tag": "t114"
+   },
+   "d-00115": {
+    "@timestamp": "2026-05-04T19:25:55.000Z",
+    "bytes": 18148,
+    "host": "web-01.example.internal",
+    "message": "event 115: elastic upstream block handshake timeout block snapshot request snapshot elastic payload decompress.",
+    "status": 200,
+    "tag": "🚀 over-the-limit-tag-0115",
+    "tags": [
+     "GET",
+     "PUT"
+    ]
+   },
+   "d-00116": {
+    "@timestamp": "2026-05-05T20:32:08.000Z",
+    "bytes": 1438402,
+    "host": "web-02.example.internal",
+    "labels": {
+     "env": "prod",
+     "rack": 4,
+     "zone": "z2"
+    },
+    "message": "event 116: snapshot payload timeout gateway repository tier field latency request timeout flush latency repository lucene gateway latency block backend cache pool compress segment flush retry.",
+    "status": 201
+   },
+   "d-00117": {
+    "@timestamp": "2026-05-06T21:39:21.000Z",
+    "bytes": 4633434,
+    "host": "web-03.example.internal",
+    "message": "event 117: miss block connection merge gateway served connection codec elastic gateway repository tier gateway stored flush handshake.",
+    "status": 404,
+    "tag": "t117"
+   },
+   "d-00118": {
+    "@timestamp": "2026-05-07T22:46:34.000Z",
+    "bytes": 1173941,
+    "host": "web-04.example.internal",
+    "message": "event 118: timeout retry merge miss miss gateway flush merge payload connection backend.",
+    "status": 500,
+    "tag": "🚀 over-the-limit-tag-0118"
+   },
+   "d-00119": {
+    "@timestamp": "2026-05-08T23:53:47.000Z",
+    "bytes": 647162,
+    "host": "web-05.example.internal",
+    "message": "event 119: checksum gateway payload field checksum elastic latency snapshot tier connection frozen frozen stored pool request elastic upstream latency replica served.",
+    "note": "日本語",
+    "status": 503
+   }
+  }
+ },
+ "test_deletes_nested": {
+  "deleted_ids": [
+   "d-00003",
+   "d-00013",
+   "d-00023",
+   "d-00033",
+   "d-00043",
+   "d-00053"
+  ],
+  "updated_ids": [
+   "d-00006",
+   "d-00021",
+   "d-00036",
+   "d-00051"
+  ],
+  "sources": {
+   "d-00000": {
+    "@timestamp": "2026-06-01T00:00:00.000Z",
+    "host": "web-01.example.internal",
+    "items": {
+     "name": "item-0-0",
+     "qty": 5
+    },
+    "status": 200
+   },
+   "d-00001": {
+    "@timestamp": "2026-06-02T01:00:00.000Z",
+    "host": "web-02.example.internal",
+    "items": [
+     {
+      "name": "item-1-0",
+      "qty": 2
+     },
+     {
+      "name": "item-1-1",
+      "qty": 7
+     }
+    ],
+    "status": 404
+   },
+   "d-00002": {
+    "@timestamp": "2026-06-03T02:00:00.000Z",
+    "host": "web-03.example.internal",
+    "items": [
+     {
+      "name": "item-2-0",
+      "qty": 8
+     },
+     {
+      "name": "item-2-1",
+      "qty": 6
+     },
+     {
+      "name": "item-2-2",
+      "qty": 9
+     }
+    ],
+    "status": 500
+   },
+   "d-00004": {
+    "@timestamp": "2026-06-05T04:00:00.000Z",
+    "host": "web-05.example.internal",
+    "items": [
+     {
+      "name": "item-4-0",
+      "qty": 6
+     },
+     {
+      "name": "item-4-1",
+      "qty": 7
+     }
+    ],
+    "status": 404
+   },
+   "d-00005": {
+    "@timestamp": "2026-06-06T05:00:00.000Z",
+    "host": "web-01.example.internal",
+    "items": [
+     {
+      "name": "item-5-0",
+      "qty": 3
+     },
+     {
+      "name": "item-5-1",
+      "qty": 5
+     },
+     {
+      "name": "item-5-2",
+      "qty": 7
+     }
+    ],
+    "status": 500
+   },
+   "d-00006": {
+    "@timestamp": "2026-06-05T12:00:00.000Z",
+    "host": "web-01.example.internal",
+    "items": {
+     "name": "item-60-0",
+     "qty": 2
+    },
+    "status": 200
+   },
+   "d-00007": {
+    "@timestamp": "2026-06-08T07:00:00.000Z",
+    "host": "web-03.example.internal",
+    "items": [
+     {
+      "name": "item-7-0",
+      "qty": 7
+     },
+     {
+      "name": "item-7-1",
+      "qty": 8
+     }
+    ],
+    "status": 404
+   },
+   "d-00008": {
+    "@timestamp": "2026-06-09T08:00:00.000Z",
+    "host": "web-04.example.internal",
+    "items": [
+     {
+      "name": "item-8-0",
+      "qty": 2
+     },
+     {
+      "name": "item-8-1",
+      "qty": 3
+     },
+     {
+      "name": "item-8-2",
+      "qty": 4
+     }
+    ],
+    "status": 500
+   },
+   "d-00009": {
+    "@timestamp": "2026-06-10T09:00:00.000Z",
+    "host": "web-05.example.internal",
+    "items": {
+     "name": "item-9-0",
+     "qty": 9
+    },
+    "status": 200
+   },
+   "d-00010": {
+    "@timestamp": "2026-06-11T10:00:00.000Z",
+    "host": "web-01.example.internal",
+    "items": [
+     {
+      "name": "item-10-0",
+      "qty": 2
+     },
+     {
+      "name": "item-10-1",
+      "qty": 6
+     }
+    ],
+    "status": 404
+   },
+   "d-00011": {
+    "@timestamp": "2026-06-12T11:00:00.000Z",
+    "host": "web-02.example.internal",
+    "items": [
+     {
+      "name": "item-11-0",
+      "qty": 6
+     },
+     {
+      "name": "item-11-1",
+      "qty": 2
+     },
+     {
+      "name": "item-11-2",
+      "qty": 9
+     }
+    ],
+    "status": 500
+   },
+   "d-00012": {
+    "@timestamp": "2026-06-13T12:00:00.000Z",
+    "host": "web-03.example.internal",
+    "items": {
+     "name": "item-12-0",
+     "qty": 7
+    },
+    "status": 200
+   },
+   "d-00014": {
+    "@timestamp": "2026-06-15T14:00:00.000Z",
+    "host": "web-05.example.internal",
+    "items": [
+     {
+      "name": "item-14-0",
+      "qty": 2
+     },
+     {
+      "name": "item-14-1",
+      "qty": 8
+     },
+     {
+      "name": "item-14-2",
+      "qty": 8
+     }
+    ],
+    "status": 500
+   },
+   "d-00015": {
+    "@timestamp": "2026-06-16T15:00:00.000Z",
+    "host": "web-01.example.internal",
+    "items": {
+     "name": "item-15-0",
+     "qty": 5
+    },
+    "status": 200
+   },
+   "d-00016": {
+    "@timestamp": "2026-06-17T16:00:00.000Z",
+    "host": "web-02.example.internal",
+    "items": [
+     {
+      "name": "item-16-0",
+      "qty": 4
+     },
+     {
+      "name": "item-16-1",
+      "qty": 8
+     }
+    ],
+    "status": 404
+   },
+   "d-00017": {
+    "@timestamp": "2026-06-18T17:00:00.000Z",
+    "host": "web-03.example.internal",
+    "items": [
+     {
+      "name": "item-17-0",
+      "qty": 5
+     },
+     {
+      "name": "item-17-1",
+      "qty": 6
+     },
+     {
+      "name": "item-17-2",
+      "qty": 8
+     }
+    ],
+    "status": 500
+   },
+   "d-00018": {
+    "@timestamp": "2026-06-19T18:00:00.000Z",
+    "host": "web-04.example.internal",
+    "items": {
+     "name": "item-18-0",
+     "qty": 5
+    },
+    "status": 200
+   },
+   "d-00019": {
+    "@timestamp": "2026-06-20T19:00:00.000Z",
+    "host": "web-05.example.internal",
+    "items": [
+     {
+      "name": "item-19-0",
+      "qty": 4
+     },
+     {
+      "name": "item-19-1",
+      "qty": 1
+     }
+    ],
+    "status": 404
+   },
+   "d-00020": {
+    "@timestamp": "2026-06-21T20:00:00.000Z",
+    "host": "web-01.example.internal",
+    "items": [
+     {
+      "name": "item-20-0",
+      "qty": 4
+     },
+     {
+      "name": "item-20-1",
+      "qty": 9
+     },
+     {
+      "name": "item-20-2",
+      "qty": 7
+     }
+    ],
+    "status": 500
+   },
+   "d-00021": {
+    "@timestamp": "2026-06-06T13:00:00.000Z",
+    "host": "web-02.example.internal",
+    "items": [
+     {
+      "name": "item-61-0",
+      "qty": 7
+     },
+     {
+      "name": "item-61-1",
+      "qty": 7
+     }
+    ],
+    "status": 404
+   },
+   "d-00022": {
+    "@timestamp": "2026-06-23T22:00:00.000Z",
+    "host": "web-03.example.internal",
+    "items": [
+     {
+      "name": "item-22-0",
+      "qty": 4
+     },
+     {
+      "name": "item-22-1",
+      "qty": 1
+     }
+    ],
+    "status": 404
+   },
+   "d-00024": {
+    "@timestamp": "2026-06-25T00:00:00.000Z",
+    "host": "web-05.example.internal",
+    "items": {
+     "name": "item-24-0",
+     "qty": 5
+    },
+    "status": 200
+   },
+   "d-00025": {
+    "@timestamp": "2026-06-26T01:00:00.000Z",
+    "host": "web-01.example.internal",
+    "items": [
+     {
+      "name": "item-25-0",
+      "qty": 5
+     },
+     {
+      "name": "item-25-1",
+      "qty": 6
+     }
+    ],
+    "status": 404
+   },
+   "d-00026": {
+    "@timestamp": "2026-06-27T02:00:00.000Z",
+    "host": "web-02.example.internal",
+    "items": [
+     {
+      "name": "item-26-0",
+      "qty": 3
+     },
+     {
+      "name": "item-26-1",
+      "qty": 1
+     },
+     {
+      "name": "item-26-2",
+      "qty": 8
+     }
+    ],
+    "status": 500
+   },
+   "d-00027": {
+    "@timestamp": "2026-06-28T03:00:00.000Z",
+    "host": "web-03.example.internal",
+    "items": {
+     "name": "item-27-0",
+     "qty": 3
+    },
+    "status": 200
+   },
+   "d-00028": {
+    "@timestamp": "2026-06-01T04:00:00.000Z",
+    "host": "web-04.example.internal",
+    "items": [
+     {
+      "name": "item-28-0",
+      "qty": 1
+     },
+     {
+      "name": "item-28-1",
+      "qty": 2
+     }
+    ],
+    "status": 404
+   },
+   "d-00029": {
+    "@timestamp": "2026-06-02T05:00:00.000Z",
+    "host": "web-05.example.internal",
+    "items": [
+     {
+      "name": "item-29-0",
+      "qty": 9
+     },
+     {
+      "name": "item-29-1",
+      "qty": 5
+     },
+     {
+      "name": "item-29-2",
+      "qty": 8
+     }
+    ],
+    "status": 500
+   },
+   "d-00030": {
+    "@timestamp": "2026-06-03T06:00:00.000Z",
+    "host": "web-01.example.internal",
+    "items": {
+     "name": "item-30-0",
+     "qty": 5
+    },
+    "status": 200
+   },
+   "d-00031": {
+    "@timestamp": "2026-06-04T07:00:00.000Z",
+    "host": "web-02.example.internal",
+    "items": [
+     {
+      "name": "item-31-0",
+      "qty": 2
+     },
+     {
+      "name": "item-31-1",
+      "qty": 5
+     }
+    ],
+    "status": 404
+   },
+   "d-00032": {
+    "@timestamp": "2026-06-05T08:00:00.000Z",
+    "host": "web-03.example.internal",
+    "items": [
+     {
+      "name": "item-32-0",
+      "qty": 7
+     },
+     {
+      "name": "item-32-1",
+      "qty": 8
+     },
+     {
+      "name": "item-32-2",
+      "qty": 3
+     }
+    ],
+    "status": 500
+   },
+   "d-00034": {
+    "@timestamp": "2026-06-07T10:00:00.000Z",
+    "host": "web-05.example.internal",
+    "items": [
+     {
+      "name": "item-34-0",
+      "qty": 1
+     },
+     {
+      "name": "item-34-1",
+      "qty": 9
+     }
+    ],
+    "status": 404
+   },
+   "d-00035": {
+    "@timestamp": "2026-06-08T11:00:00.000Z",
+    "host": "web-01.example.internal",
+    "items": [
+     {
+      "name": "item-35-0",
+      "qty": 9
+     },
+     {
+      "name": "item-35-1",
+      "qty": 5
+     },
+     {
+      "name": "item-35-2",
+      "qty": 4
+     }
+    ],
+    "status": 500
+   },
+   "d-00036": {
+    "@timestamp": "2026-06-07T14:00:00.000Z",
+    "host": "web-03.example.internal",
+    "items": [
+     {
+      "name": "item-62-0",
+      "qty": 2
+     },
+     {
+      "name": "item-62-1",
+      "qty": 1
+     },
+     {
+      "name": "item-62-2",
+      "qty": 5
+     }
+    ],
+    "status": 500
+   },
+   "d-00037": {
+    "@timestamp": "2026-06-10T13:00:00.000Z",
+    "host": "web-03.example.internal",
+    "items": [
+     {
+      "name": "item-37-0",
+      "qty": 1
+     },
+     {
+      "name": "item-37-1",
+      "qty": 1
+     }
+    ],
+    "status": 404
+   },
+   "d-00038": {
+    "@timestamp": "2026-06-11T14:00:00.000Z",
+    "host": "web-04.example.internal",
+    "items": [
+     {
+      "name": "item-38-0",
+      "qty": 9
+     },
+     {
+      "name": "item-38-1",
+      "qty": 2
+     },
+     {
+      "name": "item-38-2",
+      "qty": 4
+     }
+    ],
+    "status": 500
+   },
+   "d-00039": {
+    "@timestamp": "2026-06-12T15:00:00.000Z",
+    "host": "web-05.example.internal",
+    "items": {
+     "name": "item-39-0",
+     "qty": 9
+    },
+    "status": 200
+   },
+   "d-00040": {
+    "@timestamp": "2026-06-13T16:00:00.000Z",
+    "host": "web-01.example.internal",
+    "items": [
+     {
+      "name": "item-40-0",
+      "qty": 3
+     },
+     {
+      "name": "item-40-1",
+      "qty": 1
+     }
+    ],
+    "status": 404
+   },
+   "d-00041": {
+    "@timestamp": "2026-06-14T17:00:00.000Z",
+    "host": "web-02.example.internal",
+    "items": [
+     {
+      "name": "item-41-0",
+      "qty": 7
+     },
+     {
+      "name": "item-41-1",
+      "qty": 7
+     },
+     {
+      "name": "item-41-2",
+      "qty": 5
+     }
+    ],
+    "status": 500
+   },
+   "d-00042": {
+    "@timestamp": "2026-06-15T18:00:00.000Z",
+    "host": "web-03.example.internal",
+    "items": {
+     "name": "item-42-0",
+     "qty": 2
+    },
+    "status": 200
+   },
+   "d-00044": {
+    "@timestamp": "2026-06-17T20:00:00.000Z",
+    "host": "web-05.example.internal",
+    "items": [
+     {
+      "name": "item-44-0",
+      "qty": 9
+     },
+     {
+      "name": "item-44-1",
+      "qty": 8
+     },
+     {
+      "name": "item-44-2",
+      "qty": 4
+     }
+    ],
+    "status": 500
+   },
+   "d-00045": {
+    "@timestamp": "2026-06-18T21:00:00.000Z",
+    "host": "web-01.example.internal",
+    "items": {
+     "name": "item-45-0",
+     "qty": 5
+    },
+    "status": 200
+   },
+   "d-00046": {
+    "@timestamp": "2026-06-19T22:00:00.000Z",
+    "host": "web-02.example.internal",
+    "items": [
+     {
+      "name": "item-46-0",
+      "qty": 6
+     },
+     {
+      "name": "item-46-1",
+      "qty": 4
+     }
+    ],
+    "status": 404
+   },
+   "d-00047": {
+    "@timestamp": "2026-06-20T23:00:00.000Z",
+    "host": "web-03.example.internal",
+    "items": [
+     {
+      "name": "item-47-0",
+      "qty": 7
+     },
+     {
+      "name": "item-47-1",
+      "qty": 5
+     },
+     {
+      "name": "item-47-2",
+      "qty": 9
+     }
+    ],
+    "status": 500
+   },
+   "d-00048": {
+    "@timestamp": "2026-06-21T00:00:00.000Z",
+    "host": "web-04.example.internal",
+    "items": {
+     "name": "item-48-0",
+     "qty": 9
+    },
+    "status": 200
+   },
+   "d-00049": {
+    "@timestamp": "2026-06-22T01:00:00.000Z",
+    "host": "web-05.example.internal",
+    "items": [
+     {
+      "name": "item-49-0",
+      "qty": 3
+     },
+     {
+      "name": "item-49-1",
+      "qty": 3
+     }
+    ],
+    "status": 404
+   },
+   "d-00050": {
+    "@timestamp": "2026-06-23T02:00:00.000Z",
+    "host": "web-01.example.internal",
+    "items": [
+     {
+      "name": "item-50-0",
+      "qty": 2
+     },
+     {
+      "name": "item-50-1",
+      "qty": 5
+     },
+     {
+      "name": "item-50-2",
+      "qty": 6
+     }
+    ],
+    "status": 500
+   },
+   "d-00051": {
+    "@timestamp": "2026-06-08T15:00:00.000Z",
+    "host": "web-04.example.internal",
+    "items": {
+     "name": "item-63-0",
+     "qty": 8
+    },
+    "status": 200
+   },
+   "d-00052": {
+    "@timestamp": "2026-06-25T04:00:00.000Z",
+    "host": "web-03.example.internal",
+    "items": [
+     {
+      "name": "item-52-0",
+      "qty": 3
+     },
+     {
+      "name": "item-52-1",
+      "qty": 8
+     }
+    ],
+    "status": 404
+   },
+   "d-00054": {
+    "@timestamp": "2026-06-27T06:00:00.000Z",
+    "host": "web-05.example.internal",
+    "items": {
+     "name": "item-54-0",
+     "qty": 2
+    },
+    "status": 200
+   },
+   "d-00055": {
+    "@timestamp": "2026-06-28T07:00:00.000Z",
+    "host": "web-01.example.internal",
+    "items": [
+     {
+      "name": "item-55-0",
+      "qty": 2
+     },
+     {
+      "name": "item-55-1",
+      "qty": 8
+     }
+    ],
+    "status": 404
+   },
+   "d-00056": {
+    "@timestamp": "2026-06-01T08:00:00.000Z",
+    "host": "web-02.example.internal",
+    "items": [
+     {
+      "name": "item-56-0",
+      "qty": 2
+     },
+     {
+      "name": "item-56-1",
+      "qty": 2
+     },
+     {
+      "name": "item-56-2",
+      "qty": 5
+     }
+    ],
+    "status": 500
+   },
+   "d-00057": {
+    "@timestamp": "2026-06-02T09:00:00.000Z",
+    "host": "web-03.example.internal",
+    "items": {
+     "name": "item-57-0",
+     "qty": 4
+    },
+    "status": 200
+   },
+   "d-00058": {
+    "@timestamp": "2026-06-03T10:00:00.000Z",
+    "host": "web-04.example.internal",
+    "items": [
+     {
+      "name": "item-58-0",
+      "qty": 4
+     },
+     {
+      "name": "item-58-1",
+      "qty": 1
+     }
+    ],
+    "status": 404
+   },
+   "d-00059": {
+    "@timestamp": "2026-06-04T11:00:00.000Z",
+    "host": "web-05.example.internal",
+    "items": [
+     {
+      "name": "item-59-0",
+      "qty": 5
+     },
+     {
+      "name": "item-59-1",
+      "qty": 5
+     },
+     {
+      "name": "item-59-2",
+      "qty": 6
+     }
+    ],
+    "status": 500
+   }
+  }
+ }
+}

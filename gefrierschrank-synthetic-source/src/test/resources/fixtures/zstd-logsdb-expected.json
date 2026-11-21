@@ -1,0 +1,162 @@
+{
+  "log-001": {
+    "@timestamp": "2026-04-02T01:11:00.000Z",
+    "host": {
+      "name": "web-02.example.internal"
+    },
+    "message": "event 001: decompress codec pool served flush shard backend field cache field served segment checksum served connection tier tier replica shard shard codec field latency shard lucene served elastic frozen miss frozen elastic field miss lucene decompress connection tier latency served cache repository field upstream field replica connection miss.",
+    "status": 201
+  },
+  "log-002": {
+    "@timestamp": "2026-04-03T02:22:00.000Z",
+    "host": {
+      "name": "web-03.example.internal"
+    },
+    "message": "event 002: compress miss block field timeout stored payload flush replica flush decompress segment compress shard decompress cache lucene shard stored cache shard codec field lucene gateway checksum codec decompress backend compress stored cache payload handshake retry served flush request payload served snapshot refresh connection block gateway frozen decompress decompress gateway client decompress elastic latency.",
+    "status": 404
+  },
+  "log-003": {
+    "@timestamp": "2026-04-04T03:33:00.000Z",
+    "host": {
+      "name": "web-01.example.internal"
+    },
+    "message": "event 003: handshake shard upstream latency timeout retry lucene elastic retry client shard checksum elastic timeout cache retry latency cache miss upstream served lucene payload backend client refresh cache retry block refresh repository decompress flush snapshot elastic snapshot retry segment payload segment upstream served frozen block latency cache decompress stored frozen miss pool snapshot repository compress.",
+    "status": 500
+  },
+  "log-004": {
+    "@timestamp": "2026-04-05T04:44:00.000Z",
+    "host": {
+      "name": "web-02.example.internal"
+    },
+    "message": "event 004: stored gateway upstream codec snapshot decompress lucene repository checksum shard repository cache tier refresh client upstream gateway codec latency block lucene upstream upstream lucene replica stored served lucene codec latency pool decompress merge backend snapshot latency pool frozen handshake shard field elastic flush gateway stored refresh frozen repository served request handshake.",
+    "status": 503
+  },
+  "log-005": {
+    "@timestamp": "2026-04-06T05:55:00.000Z",
+    "host": {
+      "name": "web-03.example.internal"
+    },
+    "message": "event 005: merge retry cache payload elastic replica payload tier payload cache request segment frozen gateway frozen cache repository field snapshot pool refresh handshake codec merge miss snapshot replica client merge payload flush gateway codec gateway gateway tier decompress merge repository timeout decompress merge elastic timeout block connection tier gateway refresh miss replica latency miss replica.",
+    "status": 200
+  },
+  "log-006": {
+    "@timestamp": "2026-04-07T06:06:00.000Z",
+    "host": {
+      "name": "web-01.example.internal"
+    },
+    "message": "event 006: payload backend codec shard refresh miss repository latency miss gateway cache handshake compress flush segment backend retry shard segment checksum replica compress elastic refresh handshake replica replica payload merge retry segment request payload decompress timeout pool elastic handshake connection tier refresh connection request retry codec.",
+    "status": 201
+  },
+  "log-007": {
+    "@timestamp": "2026-04-08T07:17:00.000Z",
+    "host": {
+      "name": "web-02.example.internal"
+    },
+    "message": "event 007: connection upstream connection client merge checksum frozen latency refresh snapshot elastic repository snapshot gateway flush timeout cache latency gateway elastic compress elastic tier request miss field retry shard backend pool checksum elastic codec backend miss stored retry flush snapshot request latency latency served frozen frozen compress decompress field compress shard latency field payload miss checksum merge request handshake codec frozen.",
+    "status": 404
+  },
+  "log-008": {
+    "@timestamp": "2026-04-09T08:28:00.000Z",
+    "host": {
+      "name": "web-03.example.internal"
+    },
+    "message": "event 008: connection cache cache shard merge lucene latency compress cache timeout repository compress segment client elastic pool field tier compress refresh latency cache tier backend tier elastic connection client codec repository backend tier flush retry refresh field cache pool flush refresh refresh connection miss gateway latency merge cache flush codec backend block replica refresh handshake replica codec handshake handshake frozen elastic segment backend cache timeout segment payload.",
+    "status": 500
+  },
+  "log-009": {
+    "@timestamp": "2026-04-10T09:39:00.000Z",
+    "host": {
+      "name": "web-01.example.internal"
+    },
+    "message": "event 009: shard latency served checksum pool backend repository merge backend tier payload shard upstream compress lucene cache refresh cache flush decompress elastic frozen served decompress lucene refresh repository field lucene upstream flush request backend compress decompress request compress compress handshake compress timeout decompress payload client refresh snapshot snapshot gateway field gateway elastic field connection flush retry replica block block block repository connection connection segment shard shard client repository served stored cache.",
+    "status": 503
+  },
+  "log-010": {
+    "@timestamp": "2026-04-11T10:50:00.000Z",
+    "host": {
+      "name": "web-02.example.internal"
+    },
+    "message": "event 010: cache retry field segment compress shard merge connection repository retry frozen compress frozen shard retry backend cache retry retry field pool upstream backend gateway segment upstream miss connection timeout retry backend pool request decompress compress served checksum connection checksum miss cache merge block pool timeout payload connection client merge timeout backend repository codec shard cache latency codec repository repository miss flush repository miss upstream payload timeout shard block.",
+    "status": 200
+  },
+  "log-011": {
+    "@timestamp": "2026-04-12T11:01:00.000Z",
+    "host": {
+      "name": "web-03.example.internal"
+    },
+    "message": "event 011: codec refresh frozen merge backend compress latency checksum compress compress handshake checksum latency tier handshake client repository frozen field tier latency miss snapshot segment lucene client backend backend compress field stored client decompress pool compress client client segment lucene connection retry segment elastic backend checksum shard decompress replica replica served retry connection segment replica.",
+    "status": 201
+  },
+  "log-012": {
+    "@timestamp": "2026-04-13T12:12:00.000Z",
+    "host": {
+      "name": "web-01.example.internal"
+    },
+    "message": "event 012: stored backend repository cache elastic elastic elastic lucene block timeout lucene field retry miss miss frozen frozen payload elastic handshake gateway segment miss shard block merge replica repository served latency frozen stored shard replica snapshot frozen gateway lucene miss connection cache tier pool codec cache elastic block backend merge retry codec connection codec.",
+    "status": 404
+  },
+  "log-013": {
+    "@timestamp": "2026-04-14T13:23:00.000Z",
+    "host": {
+      "name": "web-02.example.internal"
+    },
+    "message": "event 013: stored field miss latency decompress pool block merge snapshot pool merge tier backend merge served snapshot decompress elastic pool refresh decompress replica connection connection backend request miss lucene gateway handshake cache stored timeout checksum field snapshot merge field backend stored elastic merge cache upstream timeout repository stored gateway connection client field frozen lucene cache upstream frozen lucene decompress handshake pool miss latency snapshot retry.",
+    "status": 500
+  },
+  "log-014": {
+    "@timestamp": "2026-04-15T14:34:00.000Z",
+    "host": {
+      "name": "web-03.example.internal"
+    },
+    "message": "event 014: segment field decompress flush compress codec miss cache frozen latency codec request flush repository cache cache cache segment block timeout payload decompress replica snapshot timeout snapshot merge refresh connection cache frozen segment gateway compress elastic stored stored served cache upstream stored latency segment refresh client lucene backend merge timeout elastic frozen segment handshake field checksum refresh refresh shard payload cache stored upstream cache tier served served gateway.",
+    "status": 503
+  },
+  "log-015": {
+    "@timestamp": "2026-04-16T15:45:00.000Z",
+    "host": {
+      "name": "web-01.example.internal"
+    },
+    "message": "event 015: request codec checksum client merge gateway upstream gateway refresh decompress timeout client connection stored pool client pool merge snapshot lucene checksum connection codec shard request block snapshot miss client merge backend refresh payload field client compress block request backend checksum handshake request handshake field snapshot refresh field.",
+    "status": 200
+  },
+  "log-016": {
+    "@timestamp": "2026-04-17T16:56:00.000Z",
+    "host": {
+      "name": "web-02.example.internal"
+    },
+    "message": "event 016: elastic gateway repository gateway pool backend retry segment tier timeout segment connection snapshot codec cache checksum served backend segment upstream shard payload miss client compress connection miss cache segment block gateway checksum segment client compress pool latency compress miss refresh connection stored pool tier snapshot retry.",
+    "status": 201
+  },
+  "log-017": {
+    "@timestamp": "2026-04-18T17:07:00.000Z",
+    "host": {
+      "name": "web-03.example.internal"
+    },
+    "message": "event 017: upstream cache connection block miss compress retry stored handshake checksum miss checksum pool merge backend merge connection refresh retry timeout upstream frozen refresh upstream block frozen backend codec block stored frozen miss upstream replica upstream block replica timeout client field elastic client miss tier payload decompress handshake stored upstream cache flush backend stored payload client frozen payload retry decompress payload repository payload field repository tier client tier.",
+    "status": 404
+  },
+  "log-018": {
+    "@timestamp": "2026-04-19T18:18:00.000Z",
+    "host": {
+      "name": "web-01.example.internal"
+    },
+    "message": "event 018: segment latency client served snapshot tier client field lucene field miss field cache backend shard codec latency client refresh client latency frozen flush payload client timeout shard replica codec repository payload snapshot cache codec checksum checksum merge backend latency segment pool miss refresh flush timeout checksum checksum client compress shard served client timeout tier block backend flush payload block timeout stored timeout compress snapshot segment timeout served tier timeout miss.",
+    "status": 500
+  },
+  "log-019": {
+    "@timestamp": "2026-04-20T19:29:00.000Z",
+    "host": {
+      "name": "web-02.example.internal"
+    },
+    "message": "event 019: merge stored repository handshake cache flush upstream cache codec compress stored field backend segment upstream decompress handshake client frozen backend merge pool cache miss block connection cache cache cache gateway timeout connection refresh gateway served request refresh timeout shard connection handshake block retry codec client handshake gateway lucene frozen cache gateway flush replica connection field shard connection refresh merge merge pool snapshot handshake lucene request connection miss payload client.",
+    "status": 503
+  },
+  "log-020": {
+    "@timestamp": "2026-04-21T20:40:00.000Z",
+    "host": {
+      "name": "web-03.example.internal"
+    },
+    "message": "event 020: segment stored segment stored segment checksum connection gateway tier miss pool upstream elastic payload upstream payload repository stored segment elastic shard block gateway compress handshake segment cache cache decompress elastic upstream latency cache compress block elastic compress served payload decompress compress field replica decompress field decompress merge flush client checksum elastic stored client shard latency refresh compress served repository merge decompress gateway backend.",
+    "status": 200
+  }
+}

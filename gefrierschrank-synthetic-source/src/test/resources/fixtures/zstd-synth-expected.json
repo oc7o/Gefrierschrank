@@ -1,0 +1,402 @@
+{
+  "doc-001": {
+    "@timestamp": "2026-03-02T01:07:13.001Z",
+    "bytes": 8037032,
+    "host": "web-02.example.internal",
+    "http": {
+      "method": "POST"
+    },
+    "message": "event 001: latency backend refresh decompress shard upstream request replica pool merge elastic stored frozen handshake gateway repository request repository field upstream payload compress checksum merge field decompress payload elastic merge cache decompress pool compress retry flush field elastic decompress flush block retry shard lucene client client client client codec refresh codec snapshot codec checksum refresh elastic.",
+    "price": 396.86
+  },
+  "doc-002": {
+    "@timestamp": "2026-03-03T02:14:26.002Z",
+    "bytes": 10943082,
+    "host": "web-03.example.internal",
+    "http": {
+      "method": "PUT"
+    },
+    "message": "event 002: retry replica backend request connection request latency block retry block request elastic lucene client upstream lucene cache client replica shard compress field miss snapshot elastic cache latency elastic snapshot lucene lucene gateway latency connection checksum lucene timeout backend refresh upstream tier miss shard handshake gateway segment cache flush segment decompress pool segment served timeout.",
+    "price": 592.91
+  },
+  "doc-003": {
+    "@timestamp": "2026-03-04T03:21:39.003Z",
+    "bytes": 588053,
+    "host": "web-04.example.internal",
+    "http": {
+      "method": "DELETE"
+    },
+    "message": "event 003: latency block request codec payload served pool retry snapshot checksum elastic compress timeout repository flush lucene served replica upstream connection compress latency latency miss frozen upstream flush decompress replica segment handshake gateway shard repository checksum gateway cache retry timeout shard field refresh segment shard segment compress cache connection flush stored snapshot replica codec.",
+    "price": 386.4
+  },
+  "doc-004": {
+    "@timestamp": "2026-03-05T04:28:52.004Z",
+    "bytes": 8416650,
+    "host": "web-05.example.internal",
+    "http": {
+      "method": "HEAD"
+    },
+    "message": "event 004: field shard checksum stored checksum flush snapshot frozen frozen timeout block connection latency shard miss handshake gateway compress flush latency connection codec shard handshake miss backend latency replica backend retry timeout connection lucene connection field miss stored latency segment stored payload field tier compress cache repository merge elastic tier snapshot block upstream payload gateway frozen decompress compress segment refresh compress client request.",
+    "price": 782.64
+  },
+  "doc-005": {
+    "@timestamp": "2026-03-06T05:35:05.005Z",
+    "bytes": 9855903,
+    "host": "web-01.example.internal",
+    "http": {
+      "method": "GET"
+    },
+    "message": "event 005: latency timeout timeout miss cache snapshot upstream pool frozen retry client codec block flush elastic cache payload block elastic flush handshake payload merge flush decompress block segment frozen stored connection timeout upstream merge miss segment snapshot handshake merge tier cache refresh snapshot upstream latency backend served codec request backend codec.",
+    "price": 89.76
+  },
+  "doc-006": {
+    "@timestamp": "2026-03-07T06:42:18.006Z",
+    "bytes": 4174926,
+    "host": "web-02.example.internal",
+    "http": {
+      "method": "POST"
+    },
+    "message": "event 006: segment request snapshot timeout served segment payload refresh handshake stored segment payload field served shard timeout snapshot compress frozen snapshot tier checksum compress payload cache payload timeout handshake field merge client stored payload backend compress gateway frozen request connection refresh segment served frozen replica flush request served repository gateway retry cache retry handshake merge decompress decompress latency miss cache merge lucene stored lucene snapshot gateway latency timeout snapshot.",
+    "price": 772.65
+  },
+  "doc-007": {
+    "@timestamp": "2026-03-08T07:49:31.007Z",
+    "bytes": 3867962,
+    "host": "web-03.example.internal",
+    "http": {
+      "method": "PUT"
+    },
+    "message": "event 007: frozen timeout elastic miss handshake pool handshake pool shard pool stored snapshot field compress codec frozen request field frozen field upstream codec lucene latency gateway refresh flush latency refresh refresh field client upstream retry segment decompress served gateway snapshot timeout stored pool served flush latency flush served stored block segment latency connection elastic snapshot.",
+    "price": 971.04
+  },
+  "doc-008": {
+    "@timestamp": "2026-03-09T08:56:44.008Z",
+    "bytes": 9864423,
+    "host": "web-04.example.internal",
+    "http": {
+      "method": "DELETE"
+    },
+    "message": "event 008: shard pool snapshot frozen codec flush block merge codec refresh field latency backend client upstream repository backend gateway tier retry latency connection lucene flush cache payload block handshake decompress tier codec elastic miss merge gateway elastic repository timeout latency flush miss snapshot stored merge frozen refresh elastic flush cache client timeout stored field connection compress decompress cache handshake snapshot miss served connection segment upstream refresh.",
+    "price": 467.27
+  },
+  "doc-009": {
+    "@timestamp": "2026-03-10T09:03:57.009Z",
+    "bytes": 581157,
+    "host": "web-05.example.internal",
+    "http": {
+      "method": "HEAD"
+    },
+    "message": "event 009: field gateway latency latency decompress snapshot field elastic client field timeout codec retry frozen request codec codec segment repository snapshot latency checksum tier cache repository block compress latency gateway cache block compress connection upstream connection shard replica cache request merge timeout timeout latency upstream checksum compress.",
+    "price": 9.11
+  },
+  "doc-010": {
+    "@timestamp": "2026-03-11T10:10:10.010Z",
+    "bytes": 8697964,
+    "host": "web-01.example.internal",
+    "http": {
+      "method": "GET"
+    },
+    "message": "event 010: codec miss served codec connection payload segment upstream upstream pool checksum frozen request shard miss elastic merge upstream tier pool handshake decompress timeout timeout stored gateway retry codec shard compress elastic shard elastic shard latency pool segment latency handshake timeout retry pool elastic field merge upstream merge codec tier flush block tier elastic cache backend miss stored served.",
+    "price": 369.95
+  },
+  "doc-011": {
+    "@timestamp": "2026-03-12T11:17:23.011Z",
+    "bytes": 8035458,
+    "host": "web-02.example.internal",
+    "http": {
+      "method": "POST"
+    },
+    "message": "event 011: retry snapshot backend elastic elastic tier gateway tier timeout snapshot retry stored shard gateway backend stored served compress latency tier latency request compress retry flush refresh frozen shard lucene codec request latency shard elastic replica gateway lucene latency compress cache elastic decompress request frozen replica connection upstream segment timeout connection served pool payload timeout refresh lucene miss frozen upstream repository connection flush handshake refresh replica.",
+    "price": 224.06
+  },
+  "doc-012": {
+    "@timestamp": "2026-03-13T12:24:36.012Z",
+    "bytes": 2000594,
+    "host": "web-03.example.internal",
+    "http": {
+      "method": "PUT"
+    },
+    "message": "event 012: checksum flush replica upstream retry latency handshake lucene frozen replica served backend snapshot request frozen checksum tier miss flush served handshake pool block repository repository timeout checksum served decompress backend checksum client upstream replica retry upstream flush backend snapshot field gateway tier connection cache latency stored lucene gateway latency compress upstream codec repository stored gateway served gateway upstream connection snapshot.",
+    "price": 504.41
+  },
+  "doc-013": {
+    "@timestamp": "2026-03-14T13:31:49.013Z",
+    "bytes": 5867580,
+    "host": "web-04.example.internal",
+    "http": {
+      "method": "DELETE"
+    },
+    "message": "event 013: handshake checksum frozen tier repository frozen snapshot checksum shard request block compress client handshake refresh gateway upstream replica miss field shard snapshot gateway flush connection cache stored block retry repository served served frozen pool upstream snapshot request backend decompress codec served shard field retry compress gateway pool stored cache elastic replica refresh stored shard merge served request checksum segment block.",
+    "price": 464.42
+  },
+  "doc-014": {
+    "@timestamp": "2026-03-15T14:38:02.014Z",
+    "bytes": 8817453,
+    "host": "web-05.example.internal",
+    "http": {
+      "method": "HEAD"
+    },
+    "message": "event 014: codec latency frozen block miss payload retry handshake flush client served client checksum stored gateway block client block pool latency miss backend decompress payload checksum served retry decompress gateway tier repository segment pool snapshot frozen pool payload shard backend repository miss shard segment flush client tier refresh decompress stored.",
+    "price": 491.32
+  },
+  "doc-015": {
+    "@timestamp": "2026-03-16T15:45:15.015Z",
+    "bytes": 1086876,
+    "host": "web-01.example.internal",
+    "http": {
+      "method": "GET"
+    },
+    "message": "event 015: tier replica refresh block field repository lucene retry snapshot decompress stored tier compress field upstream cache client latency merge pool snapshot shard elastic timeout codec client refresh backend miss pool refresh timeout stored latency served timeout shard connection request flush merge block shard backend flush gateway block lucene compress block decompress served client latency merge checksum elastic client.",
+    "price": 138.21
+  },
+  "doc-016": {
+    "@timestamp": "2026-03-17T16:52:28.016Z",
+    "bytes": 4004048,
+    "host": "web-02.example.internal",
+    "http": {
+      "method": "POST"
+    },
+    "message": "event 016: codec handshake block lucene codec backend backend repository payload handshake gateway tier refresh refresh upstream connection pool repository merge block merge flush snapshot connection flush cache replica timeout tier latency connection miss pool miss backend refresh gateway repository handshake elastic field latency handshake request elastic connection gateway flush checksum payload shard lucene refresh.",
+    "price": 107.92
+  },
+  "doc-017": {
+    "@timestamp": "2026-03-18T17:59:41.017Z",
+    "bytes": 6714492,
+    "host": "web-03.example.internal",
+    "http": {
+      "method": "PUT"
+    },
+    "message": "event 017: client compress upstream request flush tier served refresh connection pool gateway segment pool checksum handshake timeout refresh compress backend block pool retry compress codec refresh pool miss repository replica snapshot flush codec frozen repository segment served repository codec replica checksum retry backend refresh decompress handshake checksum block.",
+    "price": 102.77
+  },
+  "doc-018": {
+    "@timestamp": "2026-03-19T18:06:54.018Z",
+    "bytes": 1594543,
+    "host": "web-04.example.internal",
+    "http": {
+      "method": "DELETE"
+    },
+    "message": "event 018: pool latency payload flush tier lucene flush cache miss block refresh cache codec tier latency merge pool codec upstream handshake decompress upstream timeout decompress gateway payload stored pool cache merge pool pool checksum segment decompress elastic served elastic gateway block refresh connection request connection upstream elastic.",
+    "price": 238.29
+  },
+  "doc-019": {
+    "@timestamp": "2026-03-20T19:13:07.019Z",
+    "bytes": 6696590,
+    "host": "web-05.example.internal",
+    "http": {
+      "method": "HEAD"
+    },
+    "message": "event 019: repository field segment tier codec served shard segment merge request replica lucene frozen field elastic shard request refresh payload elastic upstream served latency segment elastic latency tier decompress connection tier snapshot request miss cache upstream miss segment upstream gateway latency payload upstream served upstream retry decompress segment segment block timeout snapshot frozen snapshot.",
+    "price": 494.13
+  },
+  "doc-020": {
+    "@timestamp": "2026-03-21T20:20:20.020Z",
+    "bytes": 1408650,
+    "host": "web-01.example.internal",
+    "http": {
+      "method": "GET"
+    },
+    "message": "event 020: latency flush compress miss client client latency snapshot repository decompress pool upstream retry connection backend latency gateway tier lucene refresh gateway lucene latency upstream served miss lucene refresh served connection latency connection shard repository gateway stored cache tier frozen decompress lucene gateway cache refresh snapshot cache served pool segment flush pool pool pool replica block client elastic compress lucene field shard cache snapshot payload retry.",
+    "price": 460.38
+  },
+  "doc-021": {
+    "@timestamp": "2026-03-22T21:27:33.021Z",
+    "bytes": 1991065,
+    "host": "web-02.example.internal",
+    "http": {
+      "method": "POST"
+    },
+    "message": "event 021: segment connection backend elastic cache flush served latency backend upstream compress checksum upstream cache codec handshake connection field compress compress segment gateway gateway backend field block block timeout pool connection timeout payload replica latency upstream tier repository checksum tier codec repository served pool replica backend compress gateway handshake repository connection replica miss pool field payload repository.",
+    "price": 884.85
+  },
+  "doc-022": {
+    "@timestamp": "2026-03-23T22:34:46.022Z",
+    "bytes": 1232564,
+    "host": "web-03.example.internal",
+    "http": {
+      "method": "PUT"
+    },
+    "message": "event 022: upstream upstream client refresh lucene stored refresh payload segment block stored refresh shard upstream refresh compress retry latency compress payload decompress compress block tier request handshake request stored timeout snapshot backend field lucene checksum merge gateway elastic miss block backend field client decompress gateway timeout elastic pool decompress snapshot elastic lucene compress field decompress retry retry block stored connection.",
+    "price": 262.85
+  },
+  "doc-023": {
+    "@timestamp": "2026-03-24T23:41:59.023Z",
+    "bytes": 13882974,
+    "host": "web-04.example.internal",
+    "http": {
+      "method": "DELETE"
+    },
+    "message": "event 023: snapshot compress elastic payload repository handshake cache pool refresh backend block lucene backend segment replica retry handshake served latency checksum client segment handshake miss gateway pool timeout block segment connection timeout compress field client shard merge request request lucene refresh connection elastic decompress frozen shard tier stored cache tier block decompress retry client snapshot codec.",
+    "price": 567.39
+  },
+  "doc-024": {
+    "@timestamp": "2026-03-25T00:48:12.024Z",
+    "bytes": 2509110,
+    "host": "web-05.example.internal",
+    "http": {
+      "method": "HEAD"
+    },
+    "message": "event 024: replica retry retry handshake client frozen retry elastic tier gateway stored checksum snapshot compress frozen compress lucene checksum served handshake timeout latency replica repository miss merge flush codec tier frozen served block pool miss shard snapshot gateway miss decompress shard payload compress miss served flush handshake snapshot shard timeout pool segment replica upstream handshake replica block handshake shard frozen request retry pool payload gateway pool client codec upstream elastic.",
+    "price": 110.21
+  },
+  "doc-025": {
+    "@timestamp": "2026-03-26T01:55:25.025Z",
+    "bytes": 4918520,
+    "host": "web-01.example.internal",
+    "http": {
+      "method": "GET"
+    },
+    "message": "event 025: miss replica connection flush checksum served latency tier timeout stored shard backend checksum segment upstream connection block stored elastic upstream repository request merge segment flush compress timeout pool tier field stored replica client snapshot snapshot gateway request snapshot checksum stored field codec pool handshake latency checksum compress merge snapshot miss miss checksum gateway pool tier snapshot field decompress snapshot elastic.",
+    "price": 422.94
+  },
+  "doc-026": {
+    "@timestamp": "2026-03-27T02:02:38.026Z",
+    "bytes": 14337933,
+    "host": "web-02.example.internal",
+    "http": {
+      "method": "POST"
+    },
+    "message": "event 026: client codec replica repository pool connection connection checksum elastic pool miss refresh merge retry client merge elastic client decompress handshake replica miss stored cache client checksum elastic miss compress field served compress retry handshake retry field replica replica upstream block merge request miss decompress codec request request decompress.",
+    "price": 683.12
+  },
+  "doc-027": {
+    "@timestamp": "2026-03-28T03:09:51.027Z",
+    "bytes": 1367251,
+    "host": "web-03.example.internal",
+    "http": {
+      "method": "PUT"
+    },
+    "message": "event 027: field codec pool refresh connection gateway shard compress latency connection handshake payload timeout timeout codec shard request segment refresh field request handshake elastic block snapshot backend block served timeout gateway flush tier decompress served checksum served stored backend connection elastic miss backend miss block payload block codec request frozen checksum field client lucene handshake payload.",
+    "price": 360.97
+  },
+  "doc-028": {
+    "@timestamp": "2026-03-01T04:16:04.028Z",
+    "bytes": 760294,
+    "host": "web-04.example.internal",
+    "http": {
+      "method": "DELETE"
+    },
+    "message": "event 028: tier merge checksum snapshot compress frozen stored flush request pool segment snapshot repository segment compress snapshot frozen codec timeout flush tier upstream merge client handshake retry backend upstream request merge timeout codec miss lucene repository backend replica replica upstream lucene repository timeout backend replica merge backend.",
+    "price": 67.88
+  },
+  "doc-029": {
+    "@timestamp": "2026-03-02T05:23:17.029Z",
+    "bytes": 11647875,
+    "host": "web-05.example.internal",
+    "http": {
+      "method": "HEAD"
+    },
+    "message": "event 029: retry client request merge gateway replica frozen latency timeout backend codec refresh tier codec gateway compress checksum flush elastic merge repository timeout payload replica checksum repository frozen merge field connection lucene retry request decompress refresh request block gateway request decompress flush replica decompress field miss refresh backend codec request merge stored lucene repository upstream client.",
+    "price": 984.92
+  },
+  "doc-030": {
+    "@timestamp": "2026-03-03T06:30:30.030Z",
+    "bytes": 1085409,
+    "host": "web-01.example.internal",
+    "http": {
+      "method": "GET"
+    },
+    "message": "event 030: lucene served retry upstream replica field payload segment cache frozen checksum lucene miss block request decompress flush cache field checksum field codec pool flush latency client pool replica frozen client timeout gateway timeout compress replica miss handshake request served shard client merge checksum latency request client retry checksum timeout flush tier gateway pool lucene pool gateway flush lucene pool frozen tier backend timeout connection checksum snapshot stored lucene client merge.",
+    "price": 0.47
+  },
+  "doc-031": {
+    "@timestamp": "2026-03-04T07:37:43.031Z",
+    "bytes": 5726056,
+    "host": "web-02.example.internal",
+    "http": {
+      "method": "POST"
+    },
+    "message": "event 031: repository served snapshot served field checksum elastic compress handshake elastic served segment client tier refresh segment gateway miss upstream snapshot gateway pool checksum request upstream retry field connection segment miss repository pool gateway handshake elastic connection payload payload lucene miss replica miss payload frozen repository handshake pool frozen backend checksum replica payload elastic cache refresh pool served repository handshake.",
+    "price": 651.93
+  },
+  "doc-032": {
+    "@timestamp": "2026-03-05T08:44:56.032Z",
+    "bytes": 8876673,
+    "host": "web-03.example.internal",
+    "http": {
+      "method": "PUT"
+    },
+    "message": "event 032: client client frozen stored payload snapshot shard backend compress compress cache miss flush gateway cache request block served miss decompress payload tier gateway backend block connection request elastic decompress served codec stored handshake timeout client timeout connection connection elastic checksum pool retry pool lucene timeout cache snapshot merge retry request block repository cache tier.",
+    "price": 958.28
+  },
+  "doc-033": {
+    "@timestamp": "2026-03-06T09:51:09.033Z",
+    "bytes": 86610,
+    "host": "web-04.example.internal",
+    "http": {
+      "method": "DELETE"
+    },
+    "message": "event 033: elastic gateway merge stored pool elastic merge field block decompress backend stored merge timeout pool latency snapshot refresh request decompress shard stored retry served shard replica gateway latency block miss backend request lucene backend merge handshake block replica frozen request replica repository checksum snapshot cache timeout payload tier.",
+    "price": 402.77
+  },
+  "doc-034": {
+    "@timestamp": "2026-03-07T10:58:22.034Z",
+    "bytes": 5123658,
+    "host": "web-05.example.internal",
+    "http": {
+      "method": "HEAD"
+    },
+    "message": "event 034: client checksum miss miss cache stored handshake replica elastic payload codec pool backend handshake checksum compress block gateway cache backend stored replica codec codec shard shard request latency merge timeout replica merge checksum pool served timeout upstream payload stored gateway checksum compress client field timeout client lucene repository request repository block elastic stored connection gateway segment tier pool timeout served segment payload connection connection retry.",
+    "price": 17.59
+  },
+  "doc-035": {
+    "@timestamp": "2026-03-08T11:05:35.035Z",
+    "bytes": 5673465,
+    "host": "web-01.example.internal",
+    "http": {
+      "method": "GET"
+    },
+    "message": "event 035: miss cache pool repository cache checksum flush merge upstream miss miss compress replica client frozen served snapshot stored block field block payload codec field segment codec served pool replica request frozen cache frozen handshake retry replica snapshot refresh shard segment client refresh snapshot stored upstream flush request handshake upstream pool repository.",
+    "price": 586.11
+  },
+  "doc-036": {
+    "@timestamp": "2026-03-09T12:12:48.036Z",
+    "bytes": 3112019,
+    "host": "web-02.example.internal",
+    "http": {
+      "method": "POST"
+    },
+    "message": "event 036: checksum payload compress handshake miss payload merge field pool replica checksum frozen segment served codec field gateway decompress refresh refresh checksum timeout checksum upstream request replica handshake block codec request shard lucene served client latency merge served latency merge connection request upstream cache timeout payload.",
+    "price": 735.36
+  },
+  "doc-037": {
+    "@timestamp": "2026-03-10T13:19:01.037Z",
+    "bytes": 5759774,
+    "host": "web-03.example.internal",
+    "http": {
+      "method": "PUT"
+    },
+    "message": "event 037: codec block pool frozen repository flush served decompress cache request gateway served handshake tier served upstream tier refresh frozen elastic elastic timeout merge lucene retry miss served compress field retry miss handshake tier compress flush cache shard replica frozen decompress connection shard gateway refresh replica payload merge replica flush replica payload refresh.",
+    "price": 399.29
+  },
+  "doc-038": {
+    "@timestamp": "2026-03-11T14:26:14.038Z",
+    "bytes": 6614064,
+    "host": "web-04.example.internal",
+    "http": {
+      "method": "DELETE"
+    },
+    "message": "event 038: cache merge connection elastic replica backend frozen tier segment timeout connection replica payload upstream field payload request handshake elastic client latency shard connection replica checksum decompress stored latency segment served shard handshake checksum checksum tier refresh merge upstream codec tier lucene shard gateway served decompress repository lucene connection latency field pool repository pool segment timeout connection merge gateway decompress request decompress checksum connection timeout retry segment codec.",
+    "price": 768.02
+  },
+  "doc-039": {
+    "@timestamp": "2026-03-12T15:33:27.039Z",
+    "bytes": 1680051,
+    "host": "web-05.example.internal",
+    "http": {
+      "method": "HEAD"
+    },
+    "message": "event 039: served connection client checksum repository served replica payload served block request payload latency retry handshake frozen payload gateway shard field repository miss repository checksum field connection flush connection latency handshake block payload elastic miss request pool payload codec merge codec stored replica repository replica flush stored cache lucene replica compress flush miss latency shard refresh compress shard block replica served checksum client frozen served client.",
+    "price": 485.54
+  },
+  "doc-040": {
+    "@timestamp": "2026-03-13T16:40:40.040Z",
+    "bytes": 2970516,
+    "host": "web-01.example.internal",
+    "http": {
+      "method": "GET"
+    },
+    "message": "event 040: shard field backend block request connection served client payload merge handshake compress timeout segment merge stored handshake cache retry pool segment shard replica payload tier connection connection latency miss snapshot replica compress checksum frozen decompress repository elastic request handshake compress request segment frozen upstream shard refresh client refresh snapshot elastic flush frozen upstream lucene request snapshot timeout connection refresh segment lucene compress lucene retry merge payload lucene.",
+    "price": 834.35
+  }
+}

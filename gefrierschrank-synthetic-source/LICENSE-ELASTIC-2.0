@@ -1,0 +1,145 @@
+This is a SECOND, SEPARATE license notice for this module (gefrierschrank-
+synthetic-source), distinct from and IN ADDITION TO the AGPL-3.0 declared in
+the LICENSE file in this same directory.
+
+WHY THIS FILE EXISTS: this module vendors real Elasticsearch source under
+`src/main/java/org/elasticsearch/xpack/{aggregatemetric,analytics,constantkeyword,
+wildcard,core.termsenum.action,versionfield,countedkeyword,unsignedlong,spatial}/` (see each of those packages' own
+package-info.java for exact provenance - files, upstream GitHub paths, tag
+v9.3.0). Those specific files are licensed by Elastic under the Elastic
+License 2.0 ONLY - verified by reading every one of their individual license
+headers directly, not assumed or inferred from this project's other ES
+dependency. There is no AGPL-3.0 or SSPL-1.0 alternative offered for these
+particular files, unlike the tri-licensed `org.elasticsearch.index.mapper.extras`
+vendoring (ES's mapper-extras module) also present in this module and covered
+by the AGPL-3.0 LICENSE file instead.
+
+THIS IS A MATERIALLY DIFFERENT, MORE RESTRICTIVE LICENSE than AGPL-3.0: EL2.0
+is a source-available (not OSI-approved open source) license. Its central
+restriction, verbatim from the text below: "You may not provide the software
+to third parties as a hosted or managed service, where the service provides
+users with access to any substantial set of the features or functionality of
+the software." AGPL-3.0's copyleft/network-use obligations (source
+availability on request, no restriction on WHO may run it as a service) do
+NOT describe this restriction - EL2.0 restricts WHO may commercially host the
+software as a service at all, which AGPL-3.0 does not.
+
+WHAT THIS MEANS PLAINLY: this module's own code, and the mapper-extras
+vendoring, remain AGPL-3.0 (see LICENSE) - copy, modify, and network-serve
+them subject to AGPL-3.0's source-availability terms. The field-type
+mapper implementations covered by THIS file (aggregate_metric_double,
+histogram, constant_keyword, wildcard, version, counted_keyword,
+unsigned_long, shape, geo_shape and point, plus their small vendored direct
+dependencies) are additionally restricted by Elastic License 2.0's
+hosted/managed-service limitation quoted above - regardless of what AGPL-3.0
+alone would permit for the rest of this module. If you intend to offer this
+tool (or a service built on it) to third parties as a hosted/managed service,
+review the Elastic License 2.0 terms below for that subset of files
+specifically, not just the AGPL-3.0 LICENSE file.
+
+Which exact files this applies to: every .java file under
+src/main/java/org/elasticsearch/xpack/ in this module. Each carries this
+license in its own file header - this notice does not change or supersede
+those individual headers, it documents them at the module level per this
+project's LICENSE-and-provenance convention (see the sibling LICENSE file's
+own header note pointing here).
+
+The full, unmodified Elastic License 2.0 text follows, as published at
+https://www.elastic.co/licensing/elastic-license and
+https://github.com/elastic/elasticsearch/blob/v9.3.0/licenses/ELASTIC-LICENSE-2.0.txt.
+
+---
+
+Elastic License 2.0
+
+URL: https://www.elastic.co/licensing/elastic-license
+
+## Acceptance
+
+By using the software, you agree to all of the terms and conditions below.
+
+## Copyright License
+
+The licensor grants you a non-exclusive, royalty-free, worldwide,
+non-sublicensable, non-transferable license to use, copy, distribute, make
+available, and prepare derivative works of the software, in each case subject to
+the limitations and conditions below.
+
+## Limitations
+
+You may not provide the software to third parties as a hosted or managed
+service, where the service provides users with access to any substantial set of
+the features or functionality of the software.
+
+You may not move, change, disable, or circumvent the license key functionality
+in the software, and you may not remove or obscure any functionality in the
+software that is protected by the license key.
+
+You may not alter, remove, or obscure any licensing, copyright, or other notices
+of the licensor in the software. Any use of the licensor's trademarks is subject
+to applicable law.
+
+## Patents
+
+The licensor grants you a license, under any patent claims the licensor can
+license, or becomes able to license, to make, have made, use, sell, offer for
+sale, import and have imported the software, in each case subject to the
+limitations and conditions in this license. This license does not cover any
+patent claims that you cause to be infringed by modifications or additions to
+the software. If you or your company make any written claim that the software
+infringes or contributes to infringement of any patent, your patent license for
+the software granted under these terms ends immediately. If your company makes
+such a claim, your patent license ends immediately for work on behalf of your
+company.
+
+## Notices
+
+You must ensure that anyone who gets a copy of any part of the software from you
+also gets a copy of these terms.
+
+If you modify the software, you must include in any modified copies of the
+software prominent notices stating that you have modified the software.
+
+## No Other Rights
+
+These terms do not imply any licenses other than those expressly granted in
+these terms.
+
+## Termination
+
+If you use the software in violation of these terms, such use is not licensed,
+and your licenses will automatically terminate. If the licensor provides you
+with a notice of your violation, and you cease all violation of this license no
+later than 30 days after you receive that notice, your licenses will be
+reinstated retroactively. However, if you violate these terms after such
+reinstatement, any additional violation of these terms will cause your licenses
+to terminate automatically and permanently.
+
+## No Liability
+
+*As far as the law allows, the software comes as is, without any warranty or
+condition, and the licensor will not be liable to you for any damages arising
+out of these terms or the use or nature of the software, under any kind of
+legal claim.*
+
+## Definitions
+
+The **licensor** is the entity offering these terms, and the **software** is the
+software the licensor makes available under these terms, including any portion
+of it.
+
+**you** refers to the individual or entity agreeing to these terms.
+
+**your company** is any legal entity, sole proprietorship, or other kind of
+organization that you work for, plus all organizations that have control over,
+are under the control of, or are under common control with that
+organization. **control** means ownership of substantially all the assets of an
+entity, or the power to direct its management and policies by vote, contract, or
+otherwise. Control can be direct or indirect.
+
+**your licenses** are all the licenses granted to you for the software under
+these terms.
+
+**use** means anything you do with the software requiring one of your licenses.
+
+**trademark** means trademarks, service marks, and similar rights.

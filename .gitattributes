@@ -1,0 +1,2 @@
+# The shade plugin regenerates these with CRLF on every package; keep them LF in git.
+**/dependency-reduced-pom.xml text eol=lf

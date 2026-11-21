@@ -1,0 +1,136 @@
+{
+ "elasticsearch_version": "8.17.0",
+ "indices": {
+  "cov8_nested_synth": {
+   "doc_count": 1179,
+   "mapping_source": {
+    "mode": "synthetic"
+   },
+   "segments": {
+    "0": [
+     {
+      "compound": true,
+      "deleted_docs": 40,
+      "name": "_0",
+      "num_docs": 620
+     },
+     {
+      "compound": true,
+      "deleted_docs": 4,
+      "name": "_1",
+      "num_docs": 439
+     },
+     {
+      "compound": true,
+      "deleted_docs": 1,
+      "name": "_2",
+      "num_docs": 220
+     },
+     {
+      "compound": true,
+      "deleted_docs": 12,
+      "name": "_3",
+      "num_docs": 0
+     }
+    ],
+    "1": [
+     {
+      "compound": true,
+      "deleted_docs": 18,
+      "name": "_0",
+      "num_docs": 643
+     },
+     {
+      "compound": true,
+      "deleted_docs": 10,
+      "name": "_1",
+      "num_docs": 461
+     },
+     {
+      "compound": true,
+      "deleted_docs": 1,
+      "name": "_2",
+      "num_docs": 221
+     },
+     {
+      "compound": true,
+      "deleted_docs": 9,
+      "name": "_3",
+      "num_docs": 0
+     }
+    ]
+   },
+   "settings": {
+    "index.codec": "default",
+    "index.mapping.source.mode": "STORED",
+    "index.mode": "standard",
+    "index.version.created": "8521000"
+   }
+  },
+  "cov8_srcmode_native": {
+   "doc_count": 60,
+   "mapping_source": {},
+   "segments": {
+    "0": [
+     {
+      "compound": true,
+      "deleted_docs": 0,
+      "name": "_0",
+      "num_docs": 40
+     }
+    ],
+    "1": [
+     {
+      "compound": true,
+      "deleted_docs": 0,
+      "name": "_0",
+      "num_docs": 40
+     }
+    ]
+   },
+   "settings": {
+    "index.codec": "default",
+    "index.mapping.source.mode": "disabled",
+    "index.mode": "standard",
+    "index.version.created": "8521000"
+   }
+  },
+  "cov8_srcoff_native": {
+   "doc_count": 120,
+   "mapping_source": {
+    "enabled": false
+   },
+   "segments": {
+    "0": [
+     {
+      "compound": true,
+      "deleted_docs": 0,
+      "name": "_0",
+      "num_docs": 40
+     }
+    ],
+    "1": [
+     {
+      "compound": true,
+      "deleted_docs": 0,
+      "name": "_0",
+      "num_docs": 40
+     },
+     {
+      "compound": true,
+      "deleted_docs": 0,
+      "name": "_1",
+      "num_docs": 80
+     }
+    ]
+   },
+   "settings": {
+    "index.codec": "default",
+    "index.mapping.source.mode": "STORED",
+    "index.mode": "standard",
+    "index.version.created": "8521000"
+   }
+  }
+ },
+ "rejections": {}
+}

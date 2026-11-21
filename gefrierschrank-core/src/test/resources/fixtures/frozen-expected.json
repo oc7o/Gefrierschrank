@@ -1,0 +1,43 @@
+{
+  "elasticsearch_version": "8.17.0",
+  "mount_storage": "full_copy",
+  "index": "frozen-docs-f5ffca09",
+  "mounted_index": "partial-frozen-docs-f5ffca09",
+  "mounted_documents": [
+    {
+      "_index": "partial-frozen-docs-f5ffca09",
+      "_id": "b",
+      "_score": null,
+      "_source": {
+        "value": [
+          2,
+          3
+        ],
+        "extra": {
+          "text": "retained"
+        }
+      },
+      "sort": [
+        3
+      ]
+    },
+    {
+      "_index": "partial-frozen-docs-f5ffca09",
+      "_id": "a",
+      "_score": null,
+      "_routing": "tenant",
+      "_source": {
+        "value": 10,
+        "children": [
+          {
+            "n": 4
+          }
+        ]
+      },
+      "sort": [
+        5
+      ]
+    }
+  ],
+  "latest_document_count": 3
+}

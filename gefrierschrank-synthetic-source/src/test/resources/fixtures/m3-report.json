@@ -1,0 +1,222 @@
+{
+ "indices": {
+  "m3_compound": {
+   "doc_count": 400,
+   "segments": [
+    {
+     "compound": true,
+     "deleted_docs": 0,
+     "name": "_0",
+     "num_docs": 200
+    },
+    {
+     "compound": true,
+     "deleted_docs": 0,
+     "name": "_1",
+     "num_docs": 200
+    }
+   ],
+   "settings": {
+    "index.codec": "best_compression",
+    "index.compound_format": "1gb",
+    "index.mapping.source.mode": "SYNTHETIC",
+    "index.mode": "logsdb",
+    "index.version.created": "9060000"
+   }
+  },
+  "m3_dense": {
+   "doc_count": 300,
+   "segments": [
+    {
+     "compound": false,
+     "deleted_docs": 0,
+     "name": "_2",
+     "num_docs": 300
+    }
+   ],
+   "settings": {
+    "index.codec": "default",
+    "index.compound_format": "false",
+    "index.mapping.source.mode": "synthetic",
+    "index.mode": "standard",
+    "index.version.created": "9060000"
+   }
+  },
+  "m3_doc_count": {
+   "doc_count": 300,
+   "segments": [
+    {
+     "compound": false,
+     "deleted_docs": 0,
+     "name": "_2",
+     "num_docs": 300
+    }
+   ],
+   "settings": {
+    "index.codec": "default",
+    "index.compound_format": "false",
+    "index.mapping.source.mode": "synthetic",
+    "index.mode": "standard",
+    "index.version.created": "9060000"
+   }
+  },
+  "m3_logsdb": {
+   "doc_count": 400,
+   "segments": [
+    {
+     "compound": false,
+     "deleted_docs": 0,
+     "name": "_2",
+     "num_docs": 400
+    }
+   ],
+   "settings": {
+    "index.codec": "best_compression",
+    "index.compound_format": "false",
+    "index.mapping.source.mode": "SYNTHETIC",
+    "index.mode": "logsdb",
+    "index.version.created": "9060000"
+   }
+  },
+  "m3_logsdb_multi": {
+   "doc_count": 363,
+   "segments": [
+    {
+     "compound": false,
+     "deleted_docs": 44,
+     "name": "_1",
+     "num_docs": 156
+    },
+    {
+     "compound": true,
+     "deleted_docs": 22,
+     "name": "_2",
+     "num_docs": 207
+    },
+    {
+     "compound": true,
+     "deleted_docs": 37,
+     "name": "_3",
+     "num_docs": 0
+    }
+   ],
+   "settings": {
+    "index.codec": "best_compression",
+    "index.compound_format": "false",
+    "index.mapping.source.mode": "SYNTHETIC",
+    "index.mode": "logsdb",
+    "index.version.created": "9060000"
+   }
+  },
+  "m3_nested": {
+   "doc_count": 300,
+   "segments": [
+    {
+     "compound": false,
+     "deleted_docs": 0,
+     "name": "_2",
+     "num_docs": 1050
+    }
+   ],
+   "settings": {
+    "index.codec": "default",
+    "index.compound_format": "false",
+    "index.mapping.source.mode": "synthetic",
+    "index.mode": "standard",
+    "index.version.created": "9060000"
+   }
+  },
+  "m3_sparse": {
+   "doc_count": 300,
+   "segments": [
+    {
+     "compound": false,
+     "deleted_docs": 0,
+     "name": "_2",
+     "num_docs": 300
+    }
+   ],
+   "settings": {
+    "index.codec": "default",
+    "index.compound_format": "false",
+    "index.mapping.source.mode": "synthetic",
+    "index.mode": "standard",
+    "index.version.created": "9060000"
+   }
+  },
+  "m3_src_off": {
+   "doc_count": 200,
+   "segments": [
+    {
+     "compound": false,
+     "deleted_docs": 0,
+     "name": "_2",
+     "num_docs": 200
+    }
+   ],
+   "settings": {
+    "index.codec": "default",
+    "index.compound_format": "false",
+    "index.mapping.source.mode": "STORED",
+    "index.mode": "standard",
+    "index.version.created": "9060000"
+   }
+  },
+  "m3_tsdb": {
+   "doc_count": 400,
+   "segments": [
+    {
+     "compound": false,
+     "deleted_docs": 0,
+     "name": "_2",
+     "num_docs": 400
+    }
+   ],
+   "settings": {
+    "index.codec": "default",
+    "index.compound_format": "false",
+    "index.mapping.source.mode": "SYNTHETIC",
+    "index.mode": "time_series",
+    "index.version.created": "9060000"
+   }
+  },
+  "m3_types": {
+   "doc_count": 300,
+   "segments": [
+    {
+     "compound": false,
+     "deleted_docs": 0,
+     "name": "_2",
+     "num_docs": 300
+    }
+   ],
+   "settings": {
+    "index.codec": "default",
+    "index.compound_format": "false",
+    "index.mapping.source.mode": "synthetic",
+    "index.mode": "standard",
+    "index.version.created": "9060000"
+   }
+  },
+  "m3_types_analyzed": {
+   "doc_count": 300,
+   "segments": [
+    {
+     "compound": false,
+     "deleted_docs": 0,
+     "name": "_2",
+     "num_docs": 300
+    }
+   ],
+   "settings": {
+    "index.codec": "default",
+    "index.compound_format": "false",
+    "index.mapping.source.mode": "synthetic",
+    "index.mode": "standard",
+    "index.version.created": "9060000"
+   }
+  }
+ },
+ "rejected_types": {},
+ "version": "9.3.0"
+}

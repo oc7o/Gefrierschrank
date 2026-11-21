@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>de.sloow</groupId>
+        <artifactId>gefrierschrank-parent</artifactId>
+        <version>1.2.0</version>
+    </parent>
+
+    <artifactId>gefrierschrank-synthetic-source</artifactId>
+    <packaging>jar</packaging>
+
+    <!--
+        LICENSE NOTE: unlike every other module in this reactor (Apache-2.0, see the root
+        LICENSE file), this module is AGPL-3.0 - see the LICENSE file in this directory.
+        It depends on org.elasticsearch:elasticsearch, which is itself source-available
+        under a AGPL-3.0/SSPL-1.0/Elastic-License-2.0 choice, not Apache-2.0/OSS. AGPL-3.0
+        is the OSI-approved option among those three, so that's what this module declares.
+        See the root README's License section for what this means for anyone
+        distributing or network-serving the combined tool with this module included.
+
+        SECOND, DIFFERENT license also applies to a subset of this module's source: the
+        vendored org.elasticsearch.xpack.* packages (aggregate_metric_double, histogram,
+        constant_keyword, wildcard, version, counted_keyword, unsigned_long, shape, geo_shape
+        and point field-type mappers) are Elastic License 2.0 ONLY - no
+        AGPL-3.0/SSPL-1.0 alternative, unlike the tri-licensed org.elasticsearch.index.mapper.extras
+        vendoring also in this module. See LICENSE-ELASTIC-2.0 in this directory (a separate
+        file from LICENSE, deliberately not merged into it) and each org.elasticsearch.xpack.*
+        package's own package-info.java for exactly which files and why.
+    -->
+    <properties>
+        <elasticsearch.version>9.3.0</elasticsearch.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>de.sloow</groupId>
+            <artifactId>gefrierschrank-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>${elasticsearch.version}</version>
+        </dependency>
+        <!--
+            Real, ordinary Maven Central artifact (Apache-2.0 - see its own META-INF/LICENSE.txt,
+            distinct from the EL2.0-only vendored xpack sources below) - unlike mapper-extras and
+            these xpack mapper plugins, ES's libs/exponential-histogram module IS continuously
+            published standalone for 9.3.0. HistogramFieldMapper (vendored under
+            org.elasticsearch.xpack.analytics.mapper) references its ExponentialHistogram/
+            ExponentialHistogramXContent/ZeroBucket/ExponentialScaleUtils types, so this is a
+            normal dependency, not vendored source.
+        -->
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>exponential-histogram</artifactId>
+            <version>${elasticsearch.version}</version>
+        </dependency>
+        <!--
+            ES's own zstd (NativeAccess) needs libzstd from an ES distribution; standalone it has
+            none. The isolated world substitutes org.elasticsearch.nativeaccess.IsolatedJniNativeAccess,
+            which implements ES's NativeAccess/ZstdLibrary API (elasticsearch-native, otherwise only
+            a runtime transitive of elasticsearch) and decodes through core's ZstdFrameDecoder;
+            zstd-jni is used directly only for its test-only compress path.
+        -->
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch-native</artifactId>
+            <version>${elasticsearch.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.luben</groupId>
+            <artifactId>zstd-jni</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.4</version>
+                <configuration>
+                    <!-- IsolatedClassInitializationTest asks the JVM whether a class is initialized. -->
+                    <argLine>--add-exports java.base/jdk.internal.misc=ALL-UNNAMED</argLine>
+                </configuration>
+                <executions>
+                    <!-- Reruns the ZSTD fixture reconstruction in a JVM where zstd-jni cannot load
+                         its native library (the failure a noexec java.io.tmpdir produces), proving
+                         the pure-Java fallback end to end. -->
+                    <execution>
+                        <id>zstd-native-unavailable</id>
+                        <goals><goal>test</goal></goals>
+                        <configuration>
+                            <test>ZstdDecoderFallbackReconstructionTest</test>
+                            <failIfNoSpecifiedTests>false</failIfNoSpecifiedTests>
+                            <argLine>-DZstdNativePath=${project.build.directory}/missing-libzstd-jni.so</argLine>
+                            <systemPropertyVariables>
+                                <gefrierschrank.test.zstdNativeUnavailable>true</gefrierschrank.test.zstdNativeUnavailable>
+                            </systemPropertyVariables>
+                            <reportsDirectory>${project.build.directory}/surefire-reports-zstd-native-unavailable</reportsDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

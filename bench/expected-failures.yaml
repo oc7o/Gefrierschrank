@@ -1,0 +1,68 @@
+# Known Gefrierschrank defects on the benchmark datasets, so `gsbench run` and `gsbench compare`
+# can tell them apart from regressions.
+#
+# outcome:
+#   xfail         a gate failure of the index is tolerated; `tolerates: [check, ...]` limits
+#                 that to the named checks (row_count, id_routing_set, no_duplicate_id, raw_hash,
+#                 canonical_hash, source_kind), so lost or duplicated rows still fail
+#   loud-failure  the index must end FAILED or QUARANTINED and may only lack rows: a COMMITTED
+#                 export that fails the gate (e.g. content silently stripped), or committed rows
+#                 that are duplicated, extra or carry wrong content, are still gate failures
+# match keys (every given key must match, shell globs): dataset (index name), label (--label of
+# the run), version (BuildInfo version), worker_jar (present | absent). Every matching entry is
+# tried in file order; the first one that accepts the failure applies.
+# A passing index with a matching entry reports "xpass": remove or narrow the entry then.
+# Builds before the 1.1.0 version bump still reported version 1.0.0, so 1.0.0 entries also key on --label main.
+
+expected:
+  - dataset: logs-logsdb
+    label: "main*"
+    version: "1.0.0"
+    finding: logsdb-tsdb-quarantine
+    outcome: loud-failure
+    note: ES819TSDB ZSTD-compressed binary doc values (wildcard, keyword over ignore_above) NPE in isolated synthetic reconstruction; shard quarantined
+
+  - dataset: tsdb-hist
+    label: "main*"
+    version: "1.0.0"
+    finding: logsdb-tsdb-quarantine
+    outcome: loud-failure
+    note: histogram doc values in a 9.3 time_series index hit the same ES819TSDB binary doc values NPE
+
+  - dataset: "ilm-logsdb-*"
+    label: "main*"
+    version: "1.0.0"
+    finding: logsdb-tsdb-quarantine
+    outcome: loud-failure
+    note: the frozen suite's 9.3 logsdb generations hit the logs-logsdb NPE; shard quarantined
+
+  - dataset: vec-default
+    label: "main*"
+    version: "1.0.0"
+    finding: excluded-source-vectors
+    outcome: xfail
+    tolerates: [canonical_hash]
+    note: index created on 9.3 excludes dense_vector values from the stored _source; 1.0.0 commits the rows without the vectors. After the fix this must become loud-failure (or pass once vectors are rehydrated)
+
+  - dataset: "logs-*7"
+    label: "main*"
+    version: "1.0.0"
+    worker_jar: absent
+    finding: lucene9-worker-jar
+    outcome: loud-failure
+    note: 1.0.0 reads ES7 (Lucene 8) shards only through the gefrierschrank-lucene9 worker jar; without it they are quarantined (IllegalStateException from Lucene9Worker.locateWorkerJar). Later builds read them in-process and need no worker jar
+
+  - dataset: vec-default
+    label: "main*"
+    version: "1.1.0"
+    finding: excluded-source-vectors
+    outcome: loud-failure
+    note: 1.1.0 fails an index whose stored _source excludes vectors (ExcludedSourceVectorsException) before any table or download. 1.2.0 rehydrates the vectors, so every other run must pass; development builds still report 1.1.0 until the version bump, hence the label key. A 1.0.0 run labelled main* is matched first by the xfail entry above
+
+  - dataset: "*"
+    label: "main*"
+    version: "1.0.0"
+    worker_jar: absent
+    finding: lucene9-worker-jar
+    outcome: loud-failure
+    note: 1.0.0 constructs the Lucene 9 worker eagerly for every shard, so without a worker jar ES 8 and 9 shards are quarantined too; a lazy worker supplier removes this in later builds

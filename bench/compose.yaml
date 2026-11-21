@@ -1,0 +1,66 @@
+# Dedicated benchmark infrastructure. Every name carries the gs-bench prefix and every host
+# port lies in 9100-9119, so nothing here collides with the shared test MinIO on :9000 or with
+# other fixture containers. Start/stop only through `gsbench` (it holds the docker slot).
+name: gs-bench
+
+x-es: &es
+  pull_policy: never
+  environment: &es-env
+    discovery.type: single-node
+    xpack.security.enabled: "false"
+    ES_JAVA_OPTS: "-Xms${GSBENCH_ES_HEAP:-2g} -Xmx${GSBENCH_ES_HEAP:-2g}"
+    cluster.routing.allocation.disk.threshold_enabled: "false"
+    action.destructive_requires_name: "false"
+  depends_on: [minio]
+
+services:
+  minio:
+    image: minio/minio:latest
+    pull_policy: never
+    container_name: gs-bench-minio
+    ports: ["9100:9000", "9101:9001"]
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+      # Per-bucket request/byte counters are the S3 cost metric of both routes.
+      MINIO_PROMETHEUS_AUTH_TYPE: public
+    command: server /data --console-address ":9001"
+    volumes: [minio-data:/data]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  es7:
+    <<: *es
+    profiles: [es7]
+    image: gefrierschrank-es7:latest
+    container_name: gs-bench-es7
+    ports: ["9110:9200"]
+    volumes: [es7-data:/usr/share/elasticsearch/data]
+
+  es8:
+    <<: *es
+    profiles: [es8]
+    image: gefrierschrank-es8:latest
+    container_name: gs-bench-es8
+    ports: ["9111:9200"]
+    volumes: [es8-data:/usr/share/elasticsearch/data]
+
+  es9:
+    <<: *es
+    profiles: [es9]
+    image: gefrierschrank-es9:latest
+    container_name: gs-bench-es9
+    ports: ["9112:9200"]
+    volumes: [es9-data:/usr/share/elasticsearch/data]
+
+volumes:
+  minio-data: {name: gs-bench-minio-data}
+  es7-data: {name: gs-bench-es7-data}
+  es8-data: {name: gs-bench-es8-data}
+  es9-data: {name: gs-bench-es9-data}
+
+networks:
+  default: {name: gs-bench}
